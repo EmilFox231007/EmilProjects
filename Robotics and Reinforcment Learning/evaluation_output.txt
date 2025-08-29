@@ -1,0 +1,35 @@
+
+Episode 1: Target = [0.16393102 0.08671857 0.1695    ]
+  Reached goal in 72 steps. Final error: 0.000990
+
+Episode 2: Target = [0.21754909 0.07756512 0.1695    ]
+  Failed to reach goal. Final error: 0.001083
+
+Episode 3: Target = [0.1311528  0.06605586 0.1695    ]
+  Reached goal in 52 steps. Final error: 0.000943
+
+Episode 4: Target = [0.11646254 0.08452058 0.1695    ]
+  Reached goal in 43 steps. Final error: 0.000978
+
+Episode 5: Target = [0.19791725 0.08040989 0.1695    ]
+  Failed to reach goal. Final error: 0.001072
+
+Episode 6: Target = [0.11083767 0.08721766 0.1695    ]
+  Reached goal in 40 steps. Final error: 0.000970
+
+Episode 7: Target = [0.2326164  0.06752082 0.1695    ]
+  Failed to reach goal. Final error: 0.001087
+
+Episode 8: Target = [0.13502375 0.06676852 0.1695    ]
+  Reached goal in 54 steps. Final error: 0.000941
+
+Episode 9: Target = [0.15338634 0.07564367 0.1695    ]
+  Reached goal in 64 steps. Final error: 0.000993
+
+Episode 10: Target = [0.17254175 0.06957196 0.1695    ]
+  Reached goal in 81 steps. Final error: 0.000997
+
+Evaluation Summary:
+Success rate: 7/10 = 70.0%
+Average steps: 130.60
+Average final error: 0.001005

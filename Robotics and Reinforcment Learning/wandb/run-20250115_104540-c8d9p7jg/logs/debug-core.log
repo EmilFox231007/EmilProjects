@@ -1,0 +1,15 @@
+{"time":"2025-01-15T10:45:41.5486563+01:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\emilp\\AppData\\Local\\Temp\\tmpdxp597vm\\port-5908.txt","pid":5908,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-01-15T10:45:41.5527867+01:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":5908}
+{"time":"2025-01-15T10:45:41.5527867+01:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":51545,"Zone":""}}
+{"time":"2025-01-15T10:45:41.7224016+01:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T10:45:41.7728375+01:00","level":"INFO","msg":"handleInformInit: received","streamId":"c8d9p7jg","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T10:45:42.0883746+01:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"c8d9p7jg","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T15:09:31.4724009+01:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"c8d9p7jg","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T15:09:31.4729031+01:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"c8d9p7jg","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T15:09:31.4999333+01:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T15:09:31.4999333+01:00","level":"INFO","msg":"connection: Close: initiating connection closure","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T15:09:31.4999333+01:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T15:09:31.4999333+01:00","level":"INFO","msg":"connection: Close: connection successfully closed","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T15:09:31.4999333+01:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:51546"}
+{"time":"2025-01-15T15:09:31.4999333+01:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-01-15T15:09:31.4999333+01:00","level":"INFO","msg":"server is closed"}

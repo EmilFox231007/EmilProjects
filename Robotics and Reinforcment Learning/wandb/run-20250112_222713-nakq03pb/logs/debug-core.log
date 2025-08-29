@@ -1,0 +1,13 @@
+{"time":"2025-01-12T22:27:13.5763908+01:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\emilp\\AppData\\Local\\Temp\\tmpj4vv8sl5\\port-36996.txt","pid":36996,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-01-12T22:27:13.5806409+01:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":36996}
+{"time":"2025-01-12T22:27:13.5806409+01:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":52781,"Zone":""}}
+{"time":"2025-01-12T22:27:13.7452388+01:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:52782"}
+{"time":"2025-01-12T22:27:13.7858513+01:00","level":"INFO","msg":"handleInformInit: received","streamId":"nakq03pb","id":"127.0.0.1:52782"}
+{"time":"2025-01-12T22:27:15.0157164+01:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"nakq03pb","id":"127.0.0.1:52782"}
+{"time":"2025-01-12T22:28:33.3629024+01:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:52782"}
+{"time":"2025-01-12T22:28:33.3629024+01:00","level":"INFO","msg":"connection: Close: initiating connection closure","id":"127.0.0.1:52782"}
+{"time":"2025-01-12T22:28:33.3629024+01:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-01-12T22:28:33.3629024+01:00","level":"INFO","msg":"connection: Close: connection successfully closed","id":"127.0.0.1:52782"}
+{"time":"2025-01-12T22:28:34.8549418+01:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:52782"}
+{"time":"2025-01-12T22:28:34.8549418+01:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:52782"}
+{"time":"2025-01-12T22:28:34.8549418+01:00","level":"INFO","msg":"server is closed"}

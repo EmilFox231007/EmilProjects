@@ -1,0 +1,16 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "CPython 3.11.5",
+  "startedAt": "2025-01-12T20:49:49.533362Z",
+  "program": "C:\\Users\\emilp\\Documents\\GitHub\\Y2B-2023-OT2_Twin\\pendulum control.py",
+  "codePath": "pendulum control.py",
+  "git": {
+    "remote": "https://github.com/BredaUniversityADSAI/Y2B-2023-OT2_Twin.git",
+    "commit": "0e544e1e880ee057636af3a2c8f5d5575a4da7ce"
+  },
+  "email": "231007@buas.nl",
+  "root": "C:\\Users\\emilp\\Documents\\GitHub\\Y2B-2023-OT2_Twin",
+  "host": "IUA_Laptop",
+  "executable": "C:\\Users\\emilp\\myenv\\Scripts\\python.exe",
+  "codePathLocal": "pendulum control.py"
+}

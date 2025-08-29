@@ -1,0 +1,47 @@
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Logging to runs/ldfdg6r9\runs/ldfdg6r9_1
+[2KTraceback (most recent call last):[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+[2K  File "C:\Users\emilp\Documents\GitHub\Y2B-2023-OT2_Twin\pendulum control.py", line 33, in <module>━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    model.learn(total_timesteps=time_steps, callback=wandb_callback, progress_bar=True, tb_log_name=f"runs/{run.id}")
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    return super().learn(
+           ^^^^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 323, in learn[32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 224, in [0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+collect_rollouts
+    if not callback.on_step():
+           ^^^^^^^^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\stable_baselines3\common\callbacks.py", line 114, in on_step━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    return self._on_step()
+           ^^^^^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\stable_baselines3\common\callbacks.py", line 223, in _on_step━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    continue_training = callback.on_step() and continue_training
+                        ^^^^^^^^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\stable_baselines3\common\callbacks.py", line 114, in on_step━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    return self._on_step()
+           ^^^^^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\wandb\integration\sb3\sb3.py", line 136, in _on_step━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    self.save_model()
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\wandb\integration\sb3\sb3.py", line 145, in save_model━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    wandb.save(self.path, base_path=self.model_save_path)
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\wandb\sdk\wandb_run.py", line 394, in wrapper_fn━━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\wandb\sdk\wandb_run.py", line 384, in wrapper━━━━━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\wandb\sdk\wandb_run.py", line 2003, in save━━━━━━━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    return self._save(
+           ^^^^^^^^^^^
+[2K  File "C:\Users\emilp\myenv\Lib\site-packages\wandb\sdk\wandb_run.py", line 2062, in _save━━━━━━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    target_path.symlink_to(source_path)
+[2K  File "C:\Users\emilp\anaconda3\Lib\pathlib.py", line 1198, in symlink_to━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+    os.symlink(target, self, target_is_directory)
+[2KOSError: [WinError 1314] A required privilege is not held by the client: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]
+'C:\\Users\\emilp\\Documents\\GitHub\\Y2B-2023-OT2_Twin\\models\\ldfdg6r9\\model.zip' ->
+'C:\\Users\\emilp\\Documents\\GitHub\\Y2B-2023-OT2_Twin\\wandb\\run-20250112_220108-ldfdg6r9\\files\\model.zip'
+[35m   1%[0m [38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m950/100,000 [0m [ [33m0:00:00[0m < [36m0:00:41[0m , [31m2,444 it/s[0m ]

@@ -1,0 +1,16 @@
+{"time":"2025-01-12T22:27:13.7869282+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"C:\\Users\\emilp\\Documents\\GitHub\\Y2B-2023-OT2_Twin\\wandb\\run-20250112_222713-nakq03pb\\logs\\debug-core.log"}
+{"time":"2025-01-12T22:27:15.0157164+01:00","level":"INFO","msg":"created new stream","id":"nakq03pb"}
+{"time":"2025-01-12T22:27:15.0157164+01:00","level":"INFO","msg":"stream: started","id":"nakq03pb"}
+{"time":"2025-01-12T22:27:15.0157164+01:00","level":"INFO","msg":"handler: started","stream_id":"nakq03pb"}
+{"time":"2025-01-12T22:27:15.0157164+01:00","level":"INFO","msg":"sender: started","stream_id":"nakq03pb"}
+{"time":"2025-01-12T22:27:15.0157164+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"nakq03pb"}
+{"time":"2025-01-12T22:27:15.353722+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-12T22:27:25.4435223+01:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-12T22:28:33.3629024+01:00","level":"INFO","msg":"stream: closing","id":"nakq03pb"}
+{"time":"2025-01-12T22:28:33.3629024+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-12T22:28:33.3634802+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-12T22:28:34.6470833+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-12T22:28:34.8487832+01:00","level":"INFO","msg":"handler: closed","stream_id":"nakq03pb"}
+{"time":"2025-01-12T22:28:34.8487832+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"nakq03pb"}
+{"time":"2025-01-12T22:28:34.8493187+01:00","level":"INFO","msg":"sender: closed","stream_id":"nakq03pb"}
+{"time":"2025-01-12T22:28:34.8493909+01:00","level":"INFO","msg":"stream: closed","id":"nakq03pb"}

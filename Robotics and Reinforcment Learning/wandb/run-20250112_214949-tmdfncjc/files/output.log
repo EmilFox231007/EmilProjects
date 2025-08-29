@@ -1,0 +1,8 @@
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Traceback (most recent call last):
+  File "C:\Users\emilp\Documents\GitHub\Y2B-2023-OT2_Twin\pendulum control.py", line 33, in <module>
+    model.learn(total_timesteps=timesteps, callback=wandb_callback, progress_bar=True, tb_log_name=f"runs/{run.id}")
+                                ^^^^^^^^^
+NameError: name 'timesteps' is not defined
