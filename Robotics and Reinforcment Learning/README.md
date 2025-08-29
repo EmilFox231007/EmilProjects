@@ -1,3 +1,9 @@
+# Reinforcement Learning and Robotics Simulation
+
+# Project description:
+
+This is the follow up to the Computer Vision project highlighted in my portfolio. This uses the pipeline I created using CV and ML techniques to obtain the root tip coordiantes which is fed into either a PID controller or RL model which is running in a Robotics simulation with a OT2 robot, a pippette is attached to the arm and using the controllers it's supposed to be able to inoculate each coordinate point given. 
+
 # OT2 Robot Simulation with PID control
 
 This repository contains Python scripts for controlling an OT2 pipette robot in a simulation environment using PyBullet. The pipette movement is controlled either using a PID controller or a Reinforcement Learning (RL) model. The environment is implemented using OpenAI Gymnasium.
