@@ -1,0 +1,15 @@
+[run]
+source = src/axonrooter
+
+[report]
+omit =
+    */__init__.py
+    */start_api.py
+    */app/*.py
+    */api/*.py
+    */streamlit_drawable_canvas/*.py
+    */setup_azure_credentials.py
+    */__main__.py
+    */cli.py
+    */register.py
+    */train.py  

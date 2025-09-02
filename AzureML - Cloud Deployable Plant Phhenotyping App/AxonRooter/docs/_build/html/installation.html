@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; AxonRooter  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="axonrooter" href="modules.html" />
+    <link rel="prev" title="Welcome to AxonRooter’s documentation!" href="index.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+          <a href="index.html" class="icon icon-home">
+            AxonRooter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#build-the-wheel-package">1. Build the wheel package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-package">2. Install the package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verify-installation">3. Verify installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#api-usage">API Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#expected-input-and-output">Expected input and output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-python-requests-call">Example Python requests call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status-codes">Status Codes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#logging">Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#output-log-file">Output log file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enable-debug-mode">Enable debug mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log-levels">Log Levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disable-logging-for-production">Disable logging for production</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">axonrooter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AxonRooter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<p>To install the <code class="docutils literal notranslate"><span class="pre">axonrooter</span></code> package from the built <code class="docutils literal notranslate"><span class="pre">.whl</span></code> file, follow the steps below:</p>
+<section id="build-the-wheel-package">
+<h2>1. Build the wheel package<a class="headerlink" href="#build-the-wheel-package" title="Link to this heading"></a></h2>
+<p>If not already built, you can create the <code class="docutils literal notranslate"><span class="pre">.whl</span></code> using Poetry:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>build
+</pre></div>
+</div>
+</section>
+<section id="install-the-package">
+<h2>2. Install the package<a class="headerlink" href="#install-the-package" title="Link to this heading"></a></h2>
+<p>Activate the <cite>cv_env</cite> Conda environment and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>dist/axonrooter-0.1.0-py3-none-any.whl
+</pre></div>
+</div>
+<p>The Conda environment can be set up using the Conda setup guide in the “Other Evidence/Setups and Guides” directory of this repo.</p>
+</section>
+<section id="verify-installation">
+<h2>3. Verify installation<a class="headerlink" href="#verify-installation" title="Link to this heading"></a></h2>
+<p>You can verify it installed correctly by trying to import the module:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import axonrooter; print(axonrooter.__version__)&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="api-usage">
+<h1>API Usage<a class="headerlink" href="#api-usage" title="Link to this heading"></a></h1>
+<section id="expected-input-and-output">
+<h2>Expected input and output<a class="headerlink" href="#expected-input-and-output" title="Link to this heading"></a></h2>
+<p><strong>Input:</strong>
+A single image file (<code class="docutils literal notranslate"><span class="pre">.png</span></code>, <code class="docutils literal notranslate"><span class="pre">.jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">.jpeg</span></code>) sent as a <code class="docutils literal notranslate"><span class="pre">POST</span></code> request to the <code class="docutils literal notranslate"><span class="pre">/predict/</span></code> endpoint.</p>
+<p><strong>Output:</strong>
+A JSON object containing a list of root tip coordinates (x, y), up to 5 roots total.</p>
+<p><strong>Example Output:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;tips&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="mi">104</span><span class="p">,</span><span class="w"> </span><span class="mi">2932</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">2875</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="mi">412</span><span class="p">,</span><span class="w"> </span><span class="mi">2890</span><span class="p">]</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-python-requests-call">
+<h2>Example Python requests call<a class="headerlink" href="#example-python-requests-call" title="Link to this heading"></a></h2>
+<p>A full example using Python’s <cite>requests</cite> library:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="n">api_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8000/&#39;</span>
+<span class="n">endpoint</span> <span class="o">=</span> <span class="s1">&#39;predict/&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">api_url</span> <span class="o">+</span> <span class="n">endpoint</span>
+
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;path_to_img&#39;</span><span class="p">:</span> <span class="s2">&quot;C:/Users/Endijs/Desktop/School/Y2/Block D/Testing images/test1.png&quot;</span><span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="status-codes">
+<h2>Status Codes<a class="headerlink" href="#status-codes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">200</span> <span class="pre">OK</span></code>: Prediction successful</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">422</span> <span class="pre">Unprocessable</span> <span class="pre">Entity</span></code>: Missing or corrupted input file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">500</span> <span class="pre">Internal</span> <span class="pre">Server</span> <span class="pre">Error</span></code>: Inference failure</p></li>
+</ul>
+</section>
+</section>
+<section id="logging">
+<h1>Logging<a class="headerlink" href="#logging" title="Link to this heading"></a></h1>
+<p>This project uses Python’s built-in logging module to track events.</p>
+<section id="output-log-file">
+<h2>Output log file<a class="headerlink" href="#output-log-file" title="Link to this heading"></a></h2>
+<p>Logs are saved in <code class="docutils literal notranslate"><span class="pre">src/axonrooter/logs/app.log</span></code> and include timestamps, log level, module name, and message.</p>
+</section>
+<section id="enable-debug-mode">
+<h2>Enable debug mode<a class="headerlink" href="#enable-debug-mode" title="Link to this heading"></a></h2>
+<p>To enable debug logging, modify <cite>logging_config.py</cite> in <code class="docutils literal notranslate"><span class="pre">src/axonrooter</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">config</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup_logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+
+<span class="n">setup_logging</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will:</p>
+<ul class="simple">
+<li><p>Show detailed debug messages in both the console and log file</p></li>
+<li><p>Help trace internal app behavior</p></li>
+</ul>
+</section>
+<section id="log-levels">
+<h2>Log Levels<a class="headerlink" href="#log-levels" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>DEBUG</strong>: Most verbose, useful for development</p></li>
+<li><p><strong>INFO</strong>: General application flow</p></li>
+<li><p><strong>WARNING</strong>: Unexpected but non-fatal</p></li>
+<li><p><strong>ERROR</strong>: Needs attention</p></li>
+<li><p><strong>CRITICAL</strong>: Major failure</p></li>
+</ul>
+</section>
+<section id="disable-logging-for-production">
+<h2>Disable logging for production<a class="headerlink" href="#disable-logging-for-production" title="Link to this heading"></a></h2>
+<p>To silence logging completely, modify the top of <code class="docutils literal notranslate"><span class="pre">src/axonrooter/app/app.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">axonrooter.logging_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">configure_logging</span>
+
+<span class="c1"># Enable for development</span>
+<span class="c1"># configure_logging(enabled=True, level=logging.DEBUG)</span>
+
+<span class="c1"># Disable for production</span>
+<span class="n">configure_logging</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to AxonRooter’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="axonrooter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Gabriel Wang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>axonrooter.data package &mdash; AxonRooter  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="axonrooter.models package" href="axonrooter.models.html" />
+    <link rel="prev" title="axonrooter.api package" href="axonrooter.api.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+          <a href="index.html" class="icon icon-home">
+            AxonRooter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">axonrooter</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="axonrooter.html">axonrooter package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="axonrooter.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.api.html">axonrooter.api package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">axonrooter.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.models.html">axonrooter.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html">axonrooter.streamlit_drawable_canvas package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.utils.html">axonrooter.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#module-axonrooter.cli">axonrooter.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#module-axonrooter.evaluate">axonrooter.evaluate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#module-axonrooter.logging_config">axonrooter.logging_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#module-axonrooter.predict">axonrooter.predict module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#module-axonrooter.register">axonrooter.register module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#module-axonrooter.scoring">axonrooter.scoring module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#module-axonrooter.train">axonrooter.train module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.html#module-axonrooter">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AxonRooter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">axonrooter</a></li>
+          <li class="breadcrumb-item"><a href="axonrooter.html">axonrooter package</a></li>
+      <li class="breadcrumb-item active">axonrooter.data package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/axonrooter.data.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="axonrooter-data-package">
+<h1>axonrooter.data package<a class="headerlink" href="#axonrooter-data-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-axonrooter.data.preprocessing">
+<span id="axonrooter-data-preprocessing-module"></span><h2>axonrooter.data.preprocessing module<a class="headerlink" href="#module-axonrooter.data.preprocessing" title="Link to this heading"></a></h2>
+<p>This module provides utility functions for loading, cropping, formatting, and padding
+microscopy images in grayscale in preparation for further processing or inference.
+The operations include border cropping, edge detection-based square cropping,
+and padding to match a specific patch size for model input compatibility.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.preprocessing.crop_initial">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.preprocessing.</span></span><span class="sig-name descname"><span class="pre">crop_initial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_crop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.preprocessing.crop_initial" title="Link to this definition"></a></dt>
+<dd><p>Crop the borders of an image by removing a fixed number of pixels from each side.</p>
+<p>This function removes border artifacts and noise by cropping a fixed number of pixels
+from all sides of the input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input image array to be cropped.</p></li>
+<li><p><strong>initial_crop</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of pixels to crop from each side. Default is 100.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>cropped_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Image with borders removed.</p>
+</dd>
+<dt>crop_left<span class="classifier">int</span></dt><dd><p>Number of pixels cropped from the left (equals initial_crop).</p>
+</dd>
+<dt>crop_top<span class="classifier">int</span></dt><dd><p>Number of pixels cropped from the top (equals initial_crop).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.preprocessing.find_edges">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.preprocessing.</span></span><span class="sig-name descname"><span class="pre">find_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.preprocessing.find_edges" title="Link to this definition"></a></dt>
+<dd><p>Find the left and right edges in a 1D intensity line based on threshold crossing.
+This function scans a 1D intensity profile to detect edges where pixel values
+cross a specified threshold, indicating transitions between background and content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line</strong> (<em>numpy.ndarray</em>) – 1D array representing pixel intensity values along a line.</p></li>
+<li><p><strong>threshold</strong> (<em>int</em><em>, </em><em>optional</em>) – Threshold value to detect edge transitions. Default is 70.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A tuple containing:</p>
+<ul class="simple">
+<li><p><strong>left_edge</strong> (<em>int or None</em>): Index of the left edge where intensity crosses the threshold.</p></li>
+<li><p><strong>right_edge</strong> (<em>int or None</em>): Index of the right edge where intensity crosses the threshold.</p></li>
+</ul>
+<p>Returns (None, None) if no edges are found.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple of int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.preprocessing.format_crop">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.preprocessing.</span></span><span class="sig-name descname"><span class="pre">format_crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.preprocessing.format_crop" title="Link to this definition"></a></dt>
+<dd><p>Crop the image to a square region based on edge detection in central profiles.</p>
+<p>This function analyzes the central horizontal and vertical intensity profiles
+to detect content boundaries, then creates a square crop that encompasses
+the detected content area.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input grayscale image to be cropped.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>cropped_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Square-cropped image based on detected edges.</p>
+</dd>
+<dt>left_x<span class="classifier">int</span></dt><dd><p>X-coordinate offset of the crop from the original image.</p>
+</dd>
+<dt>top_y<span class="classifier">int</span></dt><dd><p>Y-coordinate offset of the crop from the original image.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.preprocessing.padding_function">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.preprocessing.</span></span><span class="sig-name descname"><span class="pre">padding_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PATCH_SIZE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.preprocessing.padding_function" title="Link to this definition"></a></dt>
+<dd><p>Pad the input image so its dimensions are multiples of PATCH_SIZE.</p>
+<p>This function ensures the image dimensions are compatible with patch-based
+processing by padding the image to the nearest multiple of PATCH_SIZE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>formatted</strong> (<em>numpy.ndarray</em>) – Input image to be padded.</p></li>
+<li><p><strong>PATCH_SIZE</strong> (<em>int</em><em>, </em><em>optional</em>) – Target patch size multiple for padding. Default is 256.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>padded_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Image padded to the nearest multiple of PATCH_SIZE.</p>
+</dd>
+<dt>pad_top<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the top.</p>
+</dd>
+<dt>pad_bottom<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the bottom.</p>
+</dd>
+<dt>pad_left<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the left.</p>
+</dd>
+<dt>pad_right<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the right.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.preprocessing.load_and_preprocess_image">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.preprocessing.</span></span><span class="sig-name descname"><span class="pre">load_and_preprocess_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PATCH_SIZE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.preprocessing.load_and_preprocess_image" title="Link to this definition"></a></dt>
+<dd><p>Complete preprocessing pipeline for microscopy images.</p>
+<p>This function applies the full preprocessing pipeline including initial border
+cropping, content-based format cropping, and padding for patch compatibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input image (BGR or grayscale) to be preprocessed.</p></li>
+<li><p><strong>PATCH_SIZE</strong> (<em>int</em><em>, </em><em>optional</em>) – Target patch size multiple for padding. Default is 256.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>padded_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Fully preprocessed and padded grayscale image.</p>
+</dd>
+<dt>pad_top<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the top.</p>
+</dd>
+<dt>pad_bottom<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the bottom.</p>
+</dd>
+<dt>pad_left<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the left.</p>
+</dd>
+<dt>pad_right<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the right.</p>
+</dd>
+<dt>total_crop_left<span class="classifier">int</span></dt><dd><p>Total horizontal offset from all cropping operations.</p>
+</dd>
+<dt>total_crop_top<span class="classifier">int</span></dt><dd><p>Total vertical offset from all cropping operations.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The preprocessing pipeline consists of:
+1. Conversion to grayscale (if needed)
+2. Initial border cropping (removes 100px borders)
+3. Format cropping (content-based square crop)
+4. Padding (to nearest PATCH_SIZE multiple)</p>
+</dd></dl>
+
+</section>
+<section id="module-axonrooter.data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-axonrooter.data" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.crop_initial">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.</span></span><span class="sig-name descname"><span class="pre">crop_initial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_crop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.crop_initial" title="Link to this definition"></a></dt>
+<dd><p>Crop the borders of an image by removing a fixed number of pixels from each side.</p>
+<p>This function removes border artifacts and noise by cropping a fixed number of pixels
+from all sides of the input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input image array to be cropped.</p></li>
+<li><p><strong>initial_crop</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of pixels to crop from each side. Default is 100.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>cropped_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Image with borders removed.</p>
+</dd>
+<dt>crop_left<span class="classifier">int</span></dt><dd><p>Number of pixels cropped from the left (equals initial_crop).</p>
+</dd>
+<dt>crop_top<span class="classifier">int</span></dt><dd><p>Number of pixels cropped from the top (equals initial_crop).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.find_edges">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.</span></span><span class="sig-name descname"><span class="pre">find_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.find_edges" title="Link to this definition"></a></dt>
+<dd><p>Find the left and right edges in a 1D intensity line based on threshold crossing.
+This function scans a 1D intensity profile to detect edges where pixel values
+cross a specified threshold, indicating transitions between background and content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line</strong> (<em>numpy.ndarray</em>) – 1D array representing pixel intensity values along a line.</p></li>
+<li><p><strong>threshold</strong> (<em>int</em><em>, </em><em>optional</em>) – Threshold value to detect edge transitions. Default is 70.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A tuple containing:</p>
+<ul class="simple">
+<li><p><strong>left_edge</strong> (<em>int or None</em>): Index of the left edge where intensity crosses the threshold.</p></li>
+<li><p><strong>right_edge</strong> (<em>int or None</em>): Index of the right edge where intensity crosses the threshold.</p></li>
+</ul>
+<p>Returns (None, None) if no edges are found.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple of int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.format_crop">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.</span></span><span class="sig-name descname"><span class="pre">format_crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.format_crop" title="Link to this definition"></a></dt>
+<dd><p>Crop the image to a square region based on edge detection in central profiles.</p>
+<p>This function analyzes the central horizontal and vertical intensity profiles
+to detect content boundaries, then creates a square crop that encompasses
+the detected content area.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input grayscale image to be cropped.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>cropped_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Square-cropped image based on detected edges.</p>
+</dd>
+<dt>left_x<span class="classifier">int</span></dt><dd><p>X-coordinate offset of the crop from the original image.</p>
+</dd>
+<dt>top_y<span class="classifier">int</span></dt><dd><p>Y-coordinate offset of the crop from the original image.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.padding_function">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.</span></span><span class="sig-name descname"><span class="pre">padding_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PATCH_SIZE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.padding_function" title="Link to this definition"></a></dt>
+<dd><p>Pad the input image so its dimensions are multiples of PATCH_SIZE.</p>
+<p>This function ensures the image dimensions are compatible with patch-based
+processing by padding the image to the nearest multiple of PATCH_SIZE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>formatted</strong> (<em>numpy.ndarray</em>) – Input image to be padded.</p></li>
+<li><p><strong>PATCH_SIZE</strong> (<em>int</em><em>, </em><em>optional</em>) – Target patch size multiple for padding. Default is 256.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>padded_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Image padded to the nearest multiple of PATCH_SIZE.</p>
+</dd>
+<dt>pad_top<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the top.</p>
+</dd>
+<dt>pad_bottom<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the bottom.</p>
+</dd>
+<dt>pad_left<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the left.</p>
+</dd>
+<dt>pad_right<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the right.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.data.load_and_preprocess_image">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.data.</span></span><span class="sig-name descname"><span class="pre">load_and_preprocess_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PATCH_SIZE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.data.load_and_preprocess_image" title="Link to this definition"></a></dt>
+<dd><p>Complete preprocessing pipeline for microscopy images.</p>
+<p>This function applies the full preprocessing pipeline including initial border
+cropping, content-based format cropping, and padding for patch compatibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input image (BGR or grayscale) to be preprocessed.</p></li>
+<li><p><strong>PATCH_SIZE</strong> (<em>int</em><em>, </em><em>optional</em>) – Target patch size multiple for padding. Default is 256.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>padded_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Fully preprocessed and padded grayscale image.</p>
+</dd>
+<dt>pad_top<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the top.</p>
+</dd>
+<dt>pad_bottom<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the bottom.</p>
+</dd>
+<dt>pad_left<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the left.</p>
+</dd>
+<dt>pad_right<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the right.</p>
+</dd>
+<dt>total_crop_left<span class="classifier">int</span></dt><dd><p>Total horizontal offset from all cropping operations.</p>
+</dd>
+<dt>total_crop_top<span class="classifier">int</span></dt><dd><p>Total vertical offset from all cropping operations.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The preprocessing pipeline consists of:
+1. Conversion to grayscale (if needed)
+2. Initial border cropping (removes 100px borders)
+3. Format cropping (content-based square crop)
+4. Padding (to nearest PATCH_SIZE multiple)</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="axonrooter.api.html" class="btn btn-neutral float-left" title="axonrooter.api package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="axonrooter.models.html" class="btn btn-neutral float-right" title="axonrooter.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Gabriel Wang, Endjis Kiršteins, Emil Fox, Michał Bątkowski.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

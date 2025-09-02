@@ -1,0 +1,710 @@
+[2025-06-26T17:33:10.904+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-26T17:33:10.940+0000] {__init__.py:54} DEBUG - Loading core task runner: StandardTaskRunner
+[2025-06-26T17:33:10.964+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-26T17:33:10.977+0000] {base_task_runner.py:73} DEBUG - Planning to run as the  user
+[2025-06-26T17:33:10.985+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-26T17:33:11.011+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-26T17:33:11.019+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-26T17:33:11.020+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Task Instance State' PASSED: True, Task state queued was valid.
+[2025-06-26T17:33:11.021+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-26T17:33:11.022+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Task Instance Not Running' PASSED: True, Task is not in running state.
+[2025-06-26T17:33:11.022+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]>
+[2025-06-26T17:33:11.026+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-26T17:33:11.030+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-26T17:33:11.031+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-26T17:33:11.036+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Pool Slots Available' PASSED: True, There are enough open slots in default_pool to execute the task
+[2025-06-26T17:33:11.037+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]> dependency 'Task Concurrency' PASSED: True, Task concurrency is not set.
+[2025-06-26T17:33:11.038+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [queued]>
+[2025-06-26T17:33:11.038+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-26T17:33:11.059+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): run_retraining_pipeline> on 2025-06-26 17:33:01.113600+00:00
+[2025-06-26T17:33:11.080+0000] {standard_task_runner.py:63} INFO - Started process 648 to run task
+[2025-06-26T17:33:11.086+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'axonrooter_weekly_retraining', 'run_retraining_pipeline', 'manual__2025-06-26T17:33:01.113600+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/retrain_dag.py', '--cfg-path', '/tmp/tmpmpg74kts']
+[2025-06-26T17:33:11.092+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask run_retraining_pipeline
+[2025-06-26T17:33:11.094+0000] {cli_action_loggers.py:70} DEBUG - Calling callbacks: [<function default_action_log at 0x790b6bb1cca0>]
+[2025-06-26T17:33:11.165+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-26T17:33:11.179+0000] {task_command.py:426} INFO - Running <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:33:01.113600+00:00 [running]> on host 1fc71c0f6201
+[2025-06-26T17:33:11.180+0000] {settings.py:363} DEBUG - Disposing DB connection pool (PID 648)
+[2025-06-26T17:33:11.181+0000] {settings.py:250} DEBUG - Setting up DB connection pool (PID 648)
+[2025-06-26T17:33:11.182+0000] {settings.py:298} DEBUG - settings.prepare_engine_args(): Using NullPool
+[2025-06-26T17:33:11.245+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-26T17:33:11.255+0000] {taskinstance.py:1845} DEBUG - Clearing XCom data
+[2025-06-26T17:33:11.270+0000] {retries.py:91} DEBUG - Running RenderedTaskInstanceFields.write with retries. Try 1 of 3
+[2025-06-26T17:33:11.301+0000] {retries.py:91} DEBUG - Running RenderedTaskInstanceFields._do_delete_old_records with retries. Try 1 of 3
+[2025-06-26T17:33:11.319+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='axonrooter_weekly_retraining' AIRFLOW_CTX_TASK_ID='run_retraining_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T17:33:01.113600+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-26T17:33:01.113600+00:00'
+[2025-06-26T17:33:11.320+0000] {__init__.py:119} DEBUG - Preparing lineage inlets and outlets
+[2025-06-26T17:33:11.322+0000] {__init__.py:158} DEBUG - inlets: [], outlets: []
+[2025-06-26T17:33:11.323+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-26T17:33:11.340+0000] {base.py:84} INFO - Using connection ID 'azure_ml_conn' for task execution.
+[2025-06-26T17:33:11.470+0000] {authority.py:75} DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886
+[2025-06-26T17:33:11.472+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2025-06-26T17:33:12.175+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '2d24f0da-fce0-46da-8073-5b9ad67a8100'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Thu, 26 Jun 2025 17:33:09 GMT'
+    'Content-Length': '1753'
+[2025-06-26T17:33:12.182+0000] {authority.py:96} DEBUG - openid_config("https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0/.well-known/openid-configuration") = {'token_endpoint': '***', 'token_endpoint_auth_methods_supported': ['***', '***', '***'], 'jwks_uri': 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['***'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': '***', 'device_authorization_endpoint': '***', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/kerberos', 'tenant_region_scope': 'EU', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+[2025-06-26T17:33:12.184+0000] {application.py:705} DEBUG - Broker enabled? None
+[2025-06-26T17:33:12.185+0000] {application.py:755} DEBUG - Region to be used: None
+[2025-06-26T17:33:12.200+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: 42c8b3a0-fa56-41e3-8a1d-3b5d42870260
+[2025-06-26T17:33:12.201+0000] {_universal.py:508} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+[2025-06-26T17:33:12.381+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '92168226-0046-4741-bf94-ec110e1e1800'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Thu, 26 Jun 2025 17:33:09 GMT'
+    'Content-Length': '1666'
+[2025-06-26T17:33:12.383+0000] {token_cache.py:204} DEBUG - event={
+    "client_id": "27157a5a-3927-4895-8478-9d4554697d25",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://management.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 86399,
+        "ext_expires_in": 86399,
+        "refresh_in": 43199,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://management.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/oauth2/v2.0/token"
+}
+[2025-06-26T17:33:12.384+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token_info succeeded
+[2025-06-26T17:33:12.385+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/data/axonrooter_student_corrections_Endijs_20250626_040517?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a1be0d22-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:12.788+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '737'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'a207307a-fe22-4482-b283-8caa594b3daf'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: A2BB7D44A59745B6ADA7B85F6D1213D3 Ref B: AMS231020615025 Ref C: 2025-06-26T17:33:10Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:09 GMT'
+[2025-06-26T17:33:12.796+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/data/axonrooter_student_corrections_Endijs_20250626_040517/versions/1?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a28879a4-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:12.995+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1080'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '6505fc7f-e7ea-4d60-b028-360c6521474f'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 812D1DECFEA940A49F3BFF865EB2C081 Ref B: AMS231020615025 Ref C: 2025-06-26T17:33:10Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:10 GMT'
+[2025-06-26T17:33:13.001+0000] {application.py:1553} DEBUG - Cache hit an AT
+[2025-06-26T17:33:13.002+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: ab80563b-dc9a-4e72-b0c2-1110c9588b26
+[2025-06-26T17:33:13.002+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token_info succeeded
+[2025-06-26T17:33:13.003+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/components/train2/versions/5?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a2a7bb7a-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:13.584+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1966'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '207cb16f-6fc7-468a-a43a-2237553eb87c'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 086C18425B244F6FAC5C8B176A26C900 Ref B: AMS231020615037 Ref C: 2025-06-26T17:33:10Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:11 GMT'
+[2025-06-26T17:33:13.613+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/components/evaluate2/versions/2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a30521c0-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:13.972+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1957'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'c143cae0-cb97-4493-a35c-baf2f01b7ef0'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: C3F98BBA08B746CB9761D0217DAEA5D3 Ref B: AMS231020615037 Ref C: 2025-06-26T17:33:11Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:11 GMT'
+[2025-06-26T17:33:13.978+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/components/register2/versions/2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a33ce4b6-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:14.324+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1942'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'abbd029f-2047-47c4-b1be-ae60ae2a02d4'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: BF68642AA0D347BB8A8A928A3E3D0BFA Ref B: AMS231020615037 Ref C: 2025-06-26T17:33:11Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:12 GMT'
+[2025-06-26T17:33:14.330+0000] {application.py:1553} DEBUG - Cache hit an AT
+[2025-06-26T17:33:14.331+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: 36c7055f-621f-439b-8ae4-5f349c227806
+[2025-06-26T17:33:14.333+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token_info succeeded
+[2025-06-26T17:33:14.334+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/models/axonrooter-finetuned/versions/8?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a3728940-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:14.628+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1214'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'bca98b10-2157-4d59-a6c1-5ef72e986abd'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: C72B1406883B493B909C360DCDFA2C53 Ref B: AMS231020615007 Ref C: 2025-06-26T17:33:12Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:11 GMT'
+[2025-06-26T17:33:15.669+0000] {log.py:232} WARNING - Class AutoDeleteSettingSchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-26T17:33:15.685+0000] {log.py:232} WARNING - Class AutoDeleteConditionSchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-26T17:33:15.696+0000] {log.py:232} WARNING - Class BaseAutoDeleteSettingSchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-26T17:33:15.710+0000] {log.py:232} WARNING - Class IntellectualPropertySchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-26T17:33:15.721+0000] {log.py:232} WARNING - Class ProtectionLevelSchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-26T17:33:15.732+0000] {log.py:232} WARNING - Class BaseIntellectualPropertySchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-26T17:33:15.743+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:15.744+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:15.750+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:15.751+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:15.753+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:15.754+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:15.800+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:15.801+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:15.821+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:15.822+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:15.842+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:15.843+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:15.857+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/computes/adsai-lambda-2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a45ba22e-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:16.125+0000] {retries.py:91} DEBUG - Running Job._fetch_from_db with retries. Try 1 of 3
+[2025-06-26T17:33:16.145+0000] {retries.py:91} DEBUG - Running Job._update_heartbeat with retries. Try 1 of 3
+[2025-06-26T17:33:16.192+0000] {job.py:214} DEBUG - [heartbeat]
+[2025-06-26T17:33:16.303+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2753'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '4da1a6ad-a3e4-40f8-bc14-846f7112a46b'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 4A2DBDA8BADB4C49913657E4BFBB8835 Ref B: AMS231020615007 Ref C: 2025-06-26T17:33:13Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:13 GMT'
+[2025-06-26T17:33:16.310+0000] {application.py:1553} DEBUG - Cache hit an AT
+[2025-06-26T17:33:16.312+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: 69742267-b7b8-4039-9e20-01517a3cb5ec
+[2025-06-26T17:33:16.314+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token_info succeeded
+[2025-06-26T17:33:16.315+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a4a0ab44-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:16.590+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3748'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-request-id': 'da086ddc-060d-42bb-be0d-41556b88258c'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 237B66E06D884427A0C043FEF4A34633 Ref B: AMS231020615049 Ref C: 2025-06-26T17:33:14Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:14 GMT'
+[2025-06-26T17:33:16.642+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:16.643+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:16.653+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:16.654+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:16.661+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-26T17:33:16.663+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-26T17:33:16.665+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: 01887ee6-b8f4-4f65-b322-3fa414a73979
+[2025-06-26T17:33:16.666+0000] {_universal.py:508} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+[2025-06-26T17:33:16.770+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '029bbef6-bd94-4a78-b46d-c2fc1b022200'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Thu, 26 Jun 2025 17:33:14 GMT'
+    'Content-Length': '1628'
+[2025-06-26T17:33:16.771+0000] {token_cache.py:204} DEBUG - event={
+    "client_id": "27157a5a-3927-4895-8478-9d4554697d25",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://ml.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 86399,
+        "ext_expires_in": 86399,
+        "refresh_in": 43199,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://ml.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/oauth2/v2.0/token"
+}
+[2025-06-26T17:33:16.772+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token succeeded
+[2025-06-26T17:33:16.776+0000] {_universal.py:508} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/jobs/sweet_plastic_445mwyhhsw?api-version=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '2577'
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a4e7c9f2-52b3-11f0-979e-c6da882b0672'
+    'x-azureml-token': 'REDACTED'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2025-06-26T17:33:17.609+0000] {_universal.py:547} INFO - Response status: 201
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '4658'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Location': 'REDACTED'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-writes': '199'
+    'x-ms-ratelimit-remaining-subscription-global-writes': 'REDACTED'
+    'x-ms-request-id': '157e4579-7e21-4742-a67f-696f054ecd4f'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 1F1D0B3CA3F64B3BB657252D31CBA3DC Ref B: AMS231020615037 Ref C: 2025-06-26T17:33:14Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:15 GMT'
+[2025-06-26T17:33:17.619+0000] {application.py:1553} DEBUG - Cache hit an AT
+[2025-06-26T17:33:17.621+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: 8a991627-0b29-431f-af54-f4fbeacfb0c4
+[2025-06-26T17:33:17.621+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token succeeded
+[2025-06-26T17:33:17.624+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/jobs/sweet_plastic_445mwyhhsw?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a56936d6-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:17.822+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '4658'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'fafa4a05-45ab-4f03-828c-7564cd49e721'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 93C32B42C82345A7A1600DDDC74CB0A8 Ref B: AMS231020615037 Ref C: 2025-06-26T17:33:15Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:15 GMT'
+[2025-06-26T17:33:17.824+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a587a88c-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:17.982+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '3748'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-request-id': '835f8479-3a45-42f0-b7b4-8ec3eebdd260'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: CF82A9802C484C24A532D264C31B018F Ref B: AMS231020615049 Ref C: 2025-06-26T17:33:15Z'
+    'Date': 'Thu, 26 Jun 2025 17:33:15 GMT'
+[2025-06-26T17:33:18.180+0000] {logging_mixin.py:188} INFO - RunId: sweet_plastic_445mwyhhsw
+[2025-06-26T17:33:18.181+0000] {logging_mixin.py:188} INFO - Web View: https://ml.azure.com/runs/sweet_plastic_445mwyhhsw?wsid=/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourcegroups/buas-y2/workspaces/CV9-2025
+[2025-06-26T17:33:18.183+0000] {application.py:1553} DEBUG - Cache hit an AT
+[2025-06-26T17:33:18.184+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: 5a2cefcc-c131-4415-8010-626cdddbaec1
+[2025-06-26T17:33:18.184+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token_info succeeded
+[2025-06-26T17:33:18.185+0000] {_universal.py:511} INFO - Request URL: 'https://westeurope.api.azureml.ms/history/v1.0/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/runs/sweet_plastic_445mwyhhsw/details'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a5be7bbe-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:18.367+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Date': 'Thu, 26 Jun 2025 17:33:16 GMT'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Transfer-Encoding': 'chunked'
+    'Connection': 'keep-alive'
+    'Vary': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'mise-correlation-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'Content-Encoding': 'REDACTED'
+[2025-06-26T17:33:20.372+0000] {_universal.py:511} INFO - Request URL: 'https://westeurope.api.azureml.ms/history/v1.0/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/runs/sweet_plastic_445mwyhhsw/details'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a70c6c38-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:20.442+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Date': 'Thu, 26 Jun 2025 17:33:18 GMT'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Transfer-Encoding': 'chunked'
+    'Connection': 'keep-alive'
+    'Vary': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'mise-correlation-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'Content-Encoding': 'REDACTED'
+[2025-06-26T17:33:21.196+0000] {retries.py:91} DEBUG - Running Job._fetch_from_db with retries. Try 1 of 3
+[2025-06-26T17:33:21.230+0000] {retries.py:91} DEBUG - Running Job._update_heartbeat with retries. Try 1 of 3
+[2025-06-26T17:33:21.263+0000] {job.py:214} DEBUG - [heartbeat]
+[2025-06-26T17:33:22.446+0000] {_universal.py:511} INFO - Request URL: 'https://westeurope.api.azureml.ms/history/v1.0/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/runs/sweet_plastic_445mwyhhsw/details'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a848e996-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:22.622+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Date': 'Thu, 26 Jun 2025 17:33:20 GMT'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Transfer-Encoding': 'chunked'
+    'Connection': 'keep-alive'
+    'Vary': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'mise-correlation-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'Content-Encoding': 'REDACTED'
+[2025-06-26T17:33:24.763+0000] {_universal.py:511} INFO - Request URL: 'https://westeurope.api.azureml.ms/history/v1.0/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/runs/sweet_plastic_445mwyhhsw/details'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'a9aa7ec6-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:24.871+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Date': 'Thu, 26 Jun 2025 17:33:22 GMT'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Transfer-Encoding': 'chunked'
+    'Connection': 'keep-alive'
+    'Vary': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'mise-correlation-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'Content-Encoding': 'REDACTED'
+[2025-06-26T17:33:26.307+0000] {retries.py:91} DEBUG - Running Job._fetch_from_db with retries. Try 1 of 3
+[2025-06-26T17:33:26.319+0000] {retries.py:91} DEBUG - Running Job._update_heartbeat with retries. Try 1 of 3
+[2025-06-26T17:33:26.340+0000] {job.py:214} DEBUG - [heartbeat]
+[2025-06-26T17:33:26.896+0000] {_universal.py:511} INFO - Request URL: 'https://westeurope.api.azureml.ms/history/v1.0/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/runs/sweet_plastic_445mwyhhsw/details'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'aaefe8b6-52b3-11f0-979e-c6da882b0672'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-26T17:33:27.022+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Date': 'Thu, 26 Jun 2025 17:33:24 GMT'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Transfer-Encoding': 'chunked'
+    'Connection': 'keep-alive'
+    'Vary': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'mise-correlation-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'Content-Encoding': 'REDACTED'
+[2025-06-26T17:33:27.043+0000] {logging_mixin.py:188} INFO - Streaming logs/azureml/executionlogs.txt
+[2025-06-26T17:33:27.045+0000] {logging_mixin.py:188} INFO - ========================================
+[2025-06-26T17:33:27.046+0000] {logging_mixin.py:188} INFO - [2025-06-26 17:33:19Z] Completing processing run id 4df3e28f-4d87-453f-9c49-357fbfea5e9c.
+[2025-06-26T17:33:27.047+0000] {logging_mixin.py:188} INFO - [2025-06-26 17:33:20Z] Completing processing run id 592a4ef2-dace-4e53-a4f8-3c5e43af7f55.
+[2025-06-26T17:33:27.048+0000] {logging_mixin.py:188} INFO - [2025-06-26 17:33:21Z] Completing processing run id ddd21a1e-ab48-4cf7-a2b8-9ac7e29e5edf.
+[2025-06-26T17:33:27.049+0000] {logging_mixin.py:188} INFO - [2025-06-26 17:33:22Z] Finishing experiment: no runs left and nothing to schedule.
+[2025-06-26T17:33:27.050+0000] {logging_mixin.py:188} INFO - Execution Summary
+[2025-06-26T17:33:27.050+0000] {logging_mixin.py:188} INFO - =================
+[2025-06-26T17:33:27.051+0000] {logging_mixin.py:188} INFO - RunId: sweet_plastic_445mwyhhsw
+[2025-06-26T17:33:27.052+0000] {logging_mixin.py:188} INFO - Web View: https://ml.azure.com/runs/sweet_plastic_445mwyhhsw?wsid=/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourcegroups/buas-y2/workspaces/CV9-2025
+[2025-06-26T17:33:27.053+0000] {logging_mixin.py:188} INFO - 🚀 Submitted retraining pipeline job and waited for completion.
+[2025-06-26T17:33:27.054+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-26T17:33:27.054+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-26T17:33:27.056+0000] {__init__.py:77} DEBUG - Lineage called with inlets: [], outlets: []
+[2025-06-26T17:33:27.073+0000] {taskinstance.py:584} DEBUG - Clearing next_method and next_kwargs.
+[2025-06-26T17:33:27.074+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=axonrooter_weekly_retraining, task_id=run_retraining_pipeline, run_id=manual__2025-06-26T17:33:01.113600+00:00, execution_date=20250626T173301, start_date=20250626T173311, end_date=20250626T173327
+[2025-06-26T17:33:27.075+0000] {taskinstance.py:562} DEBUG - Task Duration set to 16.051209
+[2025-06-26T17:33:27.093+0000] {cli_action_loggers.py:88} DEBUG - Calling callbacks: []
+[2025-06-26T17:33:27.157+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-26T17:33:27.189+0000] {dagrun.py:932} DEBUG - number of tis tasks for <DagRun axonrooter_weekly_retraining @ 2025-06-26 17:33:01.113600+00:00: manual__2025-06-26T17:33:01.113600+00:00, state:running, queued_at: 2025-06-26 17:33:01.263414+00:00. externally triggered: True>: 2 task(s)
+[2025-06-26T17:33:27.190+0000] {dagrun.py:953} DEBUG - number of scheduleable tasks for <DagRun axonrooter_weekly_retraining @ 2025-06-26 17:33:01.113600+00:00: manual__2025-06-26T17:33:01.113600+00:00, state:running, queued_at: 2025-06-26 17:33:01.263414+00:00. externally triggered: True>: 1 task(s)
+[2025-06-26T17:33:27.191+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.promote_model_to_green manual__2025-06-26T17:33:01.113600+00:00 [None]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-26T17:33:27.192+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.promote_model_to_green manual__2025-06-26T17:33:01.113600+00:00 [None]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-26T17:33:27.193+0000] {taskinstance.py:2076} DEBUG - Dependencies all met for dep_context=None ti=<TaskInstance: axonrooter_weekly_retraining.promote_model_to_green manual__2025-06-26T17:33:01.113600+00:00 [None]>
+[2025-06-26T17:33:27.199+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-26T17:33:27.203+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

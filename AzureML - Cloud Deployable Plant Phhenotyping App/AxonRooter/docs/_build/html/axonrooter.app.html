@@ -1,0 +1,700 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>axonrooter.app package &mdash; AxonRooter  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+          <a href="index.html" class="icon icon-home">
+            AxonRooter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">axonrooter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AxonRooter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">axonrooter.app package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/axonrooter.app.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="axonrooter-app-package">
+<h1>axonrooter.app package<a class="headerlink" href="#axonrooter-app-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-axonrooter.app.app">
+<span id="axonrooter-app-app-module"></span><h2>axonrooter.app.app module<a class="headerlink" href="#module-axonrooter.app.app" title="Link to this heading"></a></h2>
+<p>This script configures the Streamlit application used for predicting root tip masks, integrated with FastAPI.
+It provides functionality for visualizing the predictions and editing them within a dedicated interactive session.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.get_base64_image">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">get_base64_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.get_base64_image" title="Link to this definition"></a></dt>
+<dd><p>Convert a local image to its base64-encoded string for proper display in streamlit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>str</em>) – Path to the image file to be encoded.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Base64-encoded string representation of the image content.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.initialize_session_state">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">initialize_session_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.initialize_session_state" title="Link to this definition"></a></dt>
+<dd><p>Initialize Streamlit session state variables.</p>
+<p>This function checks for the existence of specific keys in the
+<cite>st.session_state</cite> object and initializes them with default values
+if they are not already set. These variables are used to manage
+navigation, prediction state, image data, and user feedback
+across different pages of the Streamlit application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.add_frontend_log">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">add_frontend_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.add_frontend_log" title="Link to this definition"></a></dt>
+<dd><p>Add a log entry to the frontend logs in the Streamlit session state.</p>
+<p>This function creates a structured log entry with a timestamp, log level,
+module name, and message, and appends it to the <cite>frontend_logs</cite> list
+stored in <cite>st.session_state</cite>. It maintains a maximum of 100 log entries
+to limit memory usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>level</strong> (<em>str</em>) – The severity level of the log (e.g., ‘INFO’, ‘WARNING’, ‘ERROR’).</p></li>
+<li><p><strong>message</strong> (<em>str</em>) – The log message describing the event or action.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.render_homepage">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">render_homepage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.render_homepage" title="Link to this definition"></a></dt>
+<dd><p>Render the homepage layout for the Streamlit application.</p>
+<p>This function creates a structured homepage with two main sections:
+a top section displaying the application logo and a descriptive title
+side by side, and a bottom section (not shown) reserved for additional
+information or UI components. The layout uses Streamlit columns for
+horizontal alignment and custom HTML/CSS for styling.</p>
+<p>The homepage is intended to introduce users to the application,
+emphasizing its purpose of AI-powered root tip detection for plant research.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.update_progress_with_details">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">update_progress_with_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.update_progress_with_details" title="Link to this definition"></a></dt>
+<dd><p>Update a Streamlit progress bar and status message with detailed information.</p>
+<p>This function updates the visual progress indicator and displays a formatted
+status message to reflect the current step in a multi-step process. It also logs
+the progress message to the frontend logs and introduces a short delay for
+better visual feedback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>progress_bar</strong> (<em>st.delta_generator.DeltaGenerator</em>) – The Streamlit progress bar object to be updated.</p></li>
+<li><p><strong>status_text</strong> (<em>st.delta_generator.DeltaGenerator</em>) – The Streamlit text element for showing status messages.</p></li>
+<li><p><strong>step</strong> (<em>int</em>) – The current step number in the progress sequence.</p></li>
+<li><p><strong>total_steps</strong> (<em>int</em>) – The total number of steps in the process.</p></li>
+<li><p><strong>message</strong> (<em>str</em>) – The main message to display alongside the progress.</p></li>
+<li><p><strong>detail</strong> (<em>str</em><em>, </em><em>optional</em>) – Additional information or context to show under the main message. Default is an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.create_azure_ml_yml">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">create_azure_ml_yml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.create_azure_ml_yml" title="Link to this definition"></a></dt>
+<dd><p>Generate a YAML configuration dictionary for an Azure ML dataset.</p>
+<p>This function constructs a dictionary representing the contents of a
+dataset YAML file used to register a dataset in Azure Machine Learning.
+The dataset is of type <cite>uri_folder</cite> and is described using a custom name,
+version, description, and a reference to a path in an Azure ML datastore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset to be registered in Azure ML.</p></li>
+<li><p><strong>version</strong> (<em>str</em><em> or </em><em>int</em>) – The version number or label for the dataset.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – A human-readable description of the dataset.</p></li>
+<li><p><strong>datastore_path</strong> (<em>str</em>) – The path to the dataset within the Azure ML datastore (e.g., ‘azureml://…’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary representing the dataset YAML configuration compatible
+with Azure ML’s data registration schema.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.find_azure_cli_path">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">find_azure_cli_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.find_azure_cli_path" title="Link to this definition"></a></dt>
+<dd><p>Locate the Azure CLI executable on the system.</p>
+<p>This function checks a list of common installation paths for the Azure CLI
+(<cite>az</cite> or <cite>az.cmd</cite>) and attempts to locate it using the system <cite>PATH</cite> as a fallback.
+It logs and returns the path if found. If not found, it returns <cite>None</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The absolute path to the Azure CLI executable if found; otherwise, <cite>None</cite>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.test_azure_cli_connection">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">test_azure_cli_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.test_azure_cli_connection" title="Link to this definition"></a></dt>
+<dd><p>Verify that the Azure CLI is correctly installed, configured, and authenticated.</p>
+<p>This function performs a series of checks to validate the Azure CLI setup:
+1. Ensures the Azure CLI executable is found.
+2. Confirms that the CLI is functioning by checking its version.
+3. Verifies that the Azure ML extension is installed.
+4. Checks whether the user is logged into Azure.
+5. Confirms that Azure ML workspace access is available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple where the first element is a boolean indicating success (<cite>True</cite>)
+or failure (<cite>False</cite>), and the second element is a message describing the result.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple of (bool, str)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">success</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="n">test_azure_cli_connection</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+<span class="go">True Azure CLI is working properly</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.upload_files_to_azure_datastore">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">upload_files_to_azure_datastore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uploaded_images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uploaded_masks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canvas_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.upload_files_to_azure_datastore" title="Link to this definition"></a></dt>
+<dd><p>Upload image, mask, and optional correction files to an Azure ML datastore using workspace credentials.</p>
+<p>This function performs the following steps:
+- Verifies Azure CLI connection and workspace context.
+- Creates a temporary directory structure to organize uploaded files.
+- Saves uploaded images, masks, and optional canvas correction JSON files locally.
+- Adds metadata related to the submission.
+- Executes an Azure CLI command to create a new Azure ML data asset with the uploaded files.
+- Cleans up temporary files after upload.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uploaded_images</strong> (<em>list</em><em> of </em><em>images</em><em> or </em><em>None</em>) – List of image files uploaded via the Streamlit interface or similar.</p></li>
+<li><p><strong>uploaded_masks</strong> (<em>list</em><em> of </em><em>images</em><em> or </em><em>None</em>) – List of mask files uploaded via the Streamlit interface or similar.</p></li>
+<li><p><strong>canvas_json</strong> (<em>dict</em><em>, </em><em>optional</em>) – Optional JSON object containing corrections or annotations from a canvas tool (default is None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>data_asset_name (str or None): The name of the created Azure ML data asset, or None if upload failed.</p></li>
+<li><p>saved_files (dict): Dictionary listing saved file paths by category (‘images’, ‘masks’, ‘corrections’).</p></li>
+<li><p>cli_output (str or None): The standard output from the Azure CLI upload command, or an error message.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data_asset_name</span><span class="p">,</span> <span class="n">saved_files</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="n">upload_files_to_azure_datastore</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">uploaded_images</span><span class="o">=</span><span class="p">[</span><span class="n">uploaded_img1</span><span class="p">,</span> <span class="n">uploaded_img2</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">uploaded_masks</span><span class="o">=</span><span class="p">[</span><span class="n">uploaded_mask1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">canvas_json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;corrected&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;details&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">data_asset_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Upload successful: </span><span class="si">{</span><span class="n">data_asset_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Upload failed:&quot;</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.test_azure_cli_connection_with_workspace">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">test_azure_cli_connection_with_workspace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.test_azure_cli_connection_with_workspace" title="Link to this definition"></a></dt>
+<dd><p>Test if Azure CLI is installed, logged in, and configured with the specified Azure ML workspace.</p>
+<p>This function verifies:
+- Azure CLI is installed and accessible.
+- Azure ML extension is installed.
+- User is logged in with the expected subscription.
+- Access to the specified ML workspace.
+- Access to the specified datastore within the workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple (success, message) where <cite>success</cite> is a boolean indicating
+if the test passed, and <cite>message</cite> provides details or error info.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">success</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">test_azure_cli_connection_with_workspace</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Azure CLI setup verified.&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Setup issue: </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.get_base_id">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">get_base_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.get_base_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.match_image_mask_pairs">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">match_image_mask_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">masks</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.match_image_mask_pairs" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.split_pairs">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">split_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pairs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.split_pairs" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.upload_with_azcopy">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">upload_with_azcopy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sas_token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.upload_with_azcopy" title="Link to this definition"></a></dt>
+<dd><p>Uploads files from a local directory to Azure Blob Storage using AzCopy.</p>
+<p>Parameters:
+- local_path: Local directory containing files to upload.
+- storage_url: Azure Blob Storage URL (e.g., ‘<a class="reference external" href="https:/">https:/</a>/&lt;account&gt;.blob.core.windows.net/&lt;container&gt;’).
+- sas_token: Shared Access Signature token for authentication.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.register_dataset_with_azure_ml">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">register_dataset_with_azure_ml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datastore_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.register_dataset_with_azure_ml" title="Link to this definition"></a></dt>
+<dd><p>Register a dataset in Azure ML workspace using a datastore path.</p>
+<p>This function creates a YAML configuration for the dataset and uses the Azure CLI
+to register it as a data asset in Azure Machine Learning.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> (<em>str</em>) – Name of the dataset to register.</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – Version string for the dataset.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – Description of the dataset.</p></li>
+<li><p><strong>datastore_path</strong> (<em>str</em>) – Path to the dataset location in the Azure ML datastore.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple (success, message) where <cite>success</cite> is a boolean indicating whether
+the registration succeeded, and <cite>message</cite> contains the Azure CLI output
+or error message.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>subprocess.CalledProcessError</strong> – If the Azure CLI command fails during execution.</p></li>
+<li><p><strong>Exception</strong> – For any other unexpected errors.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The function creates a temporary YAML configuration file for the dataset registration.
+The file is cleaned up automatically after the command completes or fails.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">success</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">register_dataset_with_azure_ml</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s2">&quot;root_tips_dataset&quot;</span><span class="p">,</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span> <span class="s2">&quot;Root tips images and masks&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;azureml://datastores/workspaceblobstore/paths/root_tips/&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataset registered successfully&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dataset registration failed: </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.render_prediction_page">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">render_prediction_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.render_prediction_page" title="Link to this definition"></a></dt>
+<dd><p>Render the main prediction and analysis page in the Streamlit app.</p>
+<p>This function provides an interactive UI for users to upload plant root images,
+run predictions via a backend API, track progress, handle errors, and display results.
+It manages session state variables for prediction results and feedback.</p>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Image upload (JPG, JPEG, PNG up to 200MB)</p></li>
+<li><p>Run prediction button triggering backend analysis via HTTP POST</p></li>
+<li><p>Real-time progress bar and status updates</p></li>
+<li><p>Handling connection, HTTP, and unexpected errors gracefully</p></li>
+<li><p>Storing prediction results and metadata in <cite>st.session_state</cite></p></li>
+<li><p>Clearing previous data on new predictions</p></li>
+<li><p>Logging key events for frontend and backend diagnostics</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This function directly renders Streamlit components and updates session state.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">app</span><span class="w"> </span><span class="kn">import</span> <span class="n">render_prediction_page</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Root Analysis App&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">render_prediction_page</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.render_results_section">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">render_results_section</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.render_results_section" title="Link to this definition"></a></dt>
+<dd><p>Render the results visualization and details section for root image predictions.</p>
+<p>This function retrieves prediction results and related data from Streamlit’s session state,
+including detected root tips, padded grayscale image, and prediction mask, then displays:</p>
+<ul class="simple">
+<li><p>An interactive visualization of the padded image with overlayed prediction mask and detected tips,
+including sliders for adjusting mask and tip opacities.</p></li>
+<li><p>Zoomable visualization using mouse wheel.</p></li>
+<li><p>Detailed metrics and coordinates of detected root tips.</p></li>
+<li><p>Informative messages guiding the user if no predictions exist.</p></li>
+</ul>
+<p>The visualization uses matplotlib to create an overlay image combining grayscale image,
+mask transparency, and red tip markers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Renders Streamlit UI components directly and relies on session state variables:
+- ‘tips’: list of (y, x) coordinates of detected root tips
+- ‘pad_img_np’: numpy array of padded grayscale root image
+- ‘pred_mask’: numpy array of prediction mask overlay
+- ‘backend_used’: optional string naming backend model or service
+- ‘uploaded_filename’: uploaded image filename for status checks</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The function expects ‘tips’ and ‘pad_img_np’ to be present in the session state for rendering
+the visualization and details. If they are missing, appropriate warnings or info messages are shown.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">your_module</span><span class="w"> </span><span class="kn">import</span> <span class="n">render_results_section</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Assume prediction results stored in session state beforehand:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">st</span><span class="o">.</span><span class="n">session_state</span><span class="o">.</span><span class="n">tips</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">st</span><span class="o">.</span><span class="n">session_state</span><span class="o">.</span><span class="n">pad_img_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">st</span><span class="o">.</span><span class="n">session_state</span><span class="o">.</span><span class="n">pred_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">st</span><span class="o">.</span><span class="n">session_state</span><span class="o">.</span><span class="n">backend_used</span> <span class="o">=</span> <span class="s2">&quot;ExampleModel&quot;</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">render_results_section</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.parse_log_line">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">parse_log_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.parse_log_line" title="Link to this definition"></a></dt>
+<dd><p>Parse a single log line string into its components.</p>
+<p>The expected log line format is:
+‘YYYY-MM-DD HH:MM:SS | LEVEL | module_name | message’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>line</strong> (<em>str</em>) – A single line from a log file/string in the expected format.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A dictionary with keys:</dt><dd><ul class="simple">
+<li><p>’timestamp’ (str): Timestamp string in ‘YYYY-MM-DD HH:MM:SS’ format.</p></li>
+<li><p>’level’ (str): Log level (e.g., INFO, ERROR).</p></li>
+<li><p>’module’ (str): Name of the module generating the log.</p></li>
+<li><p>’message’ (str): The log message text.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns None if the line does not match the expected format.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.read_backend_logs">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">read_backend_logs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.read_backend_logs" title="Link to this definition"></a></dt>
+<dd><p>Read and parse backend logs from the configured backend log file.</p>
+<p>The function attempts to locate the backend log file at:
+‘&lt;project_root&gt;/src/logs/app.log’ relative to this script’s location.
+Each log line is parsed into a dictionary using <cite>parse_log_line</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>logs</strong> – A list of parsed log entries. Each entry contains keys:
+‘timestamp’, ‘level’, ‘module’, and ‘message’.
+Returns an empty list if the log file is missing or unreadable.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Dict[str, str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.render_logging_page">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">render_logging_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.render_logging_page" title="Link to this definition"></a></dt>
+<dd><p>Render the system logging page with backend and frontend logs, filters, and statistics.</p>
+<p>This page provides interactive filtering for backend logs based on module and level,
+displays frontend logs stored in session state, and summarizes log statistics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.create_drawing_canvas">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">create_drawing_canvas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.create_drawing_canvas" title="Link to this definition"></a></dt>
+<dd><p>Create a drawable canvas configuration dictionary for mask correction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing settings for the drawing canvas, including:
+- drawing_mode (str): The current drawing mode (e.g., ‘freedraw’).
+- stroke_width (int): The width of the brush stroke.
+- stroke_color (str): The color of the brush stroke in RGBA format.
+- fill_color (str): The fill color for shapes in RGBA format.
+- point_display_radius (int): The radius for displaying points in point mode.
+- realtime_update (bool): Whether the canvas updates in real time.
+- display_toolbar (bool): Whether to show the drawing toolbar.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.create_inline_drawing_controls">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">create_inline_drawing_controls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.create_inline_drawing_controls" title="Link to this definition"></a></dt>
+<dd><p>Create inline drawing controls for mask correction on the Mask Submit page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing the current drawing control settings:
+- drawing_mode (str): Selected drawing tool (‘freedraw’, ‘line’, ‘eraser’, etc.).
+- stroke_width (int): Width of the drawing stroke.
+- opacity (float): Opacity of the stroke.
+- point_display_radius (int): Radius for point display (only if drawing_mode is ‘point’).
+- realtime_update (bool): Whether to update drawing in real time.
+- display_toolbar (bool): Whether to display the drawing toolbar.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.convert_mask_to_canvas_json">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">convert_mask_to_canvas_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred_mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canvas_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canvas_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.convert_mask_to_canvas_json" title="Link to this definition"></a></dt>
+<dd><p>Convert a prediction mask to Fabric.js JSON format for canvas initialDrawing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pred_mask</strong> (<em>np.ndarray</em>) – Numpy array of the prediction mask.</p></li>
+<li><p><strong>canvas_width</strong> (<em>int</em><em>, </em><em>optional</em>) – Target width of the canvas (default is 600).</p></li>
+<li><p><strong>canvas_height</strong> (<em>int</em><em>, </em><em>optional</em>) – Target height of the canvas (default is 600).</p></li>
+<li><p><strong>opacity</strong> (<em>float</em><em>, </em><em>optional</em>) – Opacity for the mask stroke (0.0 to 1.0, default is 0.7).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Fabric.js compatible JSON object representing the mask as canvas objects.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.update_canvas_with_prediction_mask">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">update_canvas_with_prediction_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.update_canvas_with_prediction_mask" title="Link to this definition"></a></dt>
+<dd><p>Update session state with canvas-compatible prediction mask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>opacity</strong> (<em>float</em><em>, </em><em>optional</em>) – Opacity value for the mask objects (0.0 to 1.0), by default 0.7</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.render_mask_submit_page">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">render_mask_submit_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.render_mask_submit_page" title="Link to this definition"></a></dt>
+<dd><p>Render the Mask Submit page with drawable canvas</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.app.app.main">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.app.app.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.app.app.main" title="Link to this definition"></a></dt>
+<dd><p>Main application function to render the Streamlit web app interface.</p>
+<p>This function initializes session state, sets up the fonts and layout,
+renders the sidebar navigation and feedback form,
+and routes to the appropriate page content based on user selection.
+It handles feedback form submission and saves the
+data to a CSV file, displaying success or error messages accordingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>Relies on <cite>st.session_state</cite> for managing UI state and data persistence.</p></li>
+<li><p>Sidebar includes navigation radio buttons and a feedback form with checkboxes.</p></li>
+<li><p>Feedback is saved to a local CSV file named <cite>feedback.csv</cite>.</p></li>
+<li><p>Uses several helper functions to render specific pages:
+<cite>render_homepage()</cite>, <cite>render_prediction_page()</cite>, <cite>render_logging_page()</cite>, and
+<cite>render_mask_submit_page()</cite>.</p></li>
+<li><p>Feedback form submission state is tracked to display confirmation and allow reset.</p></li>
+</ul>
+</dd></dl>
+
+</section>
+<section id="module-axonrooter.app">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-axonrooter.app" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Gabriel Wang, Endjis Kiršteins, Emil Fox, Michał Bątkowski.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+$schema: https://azuremlschemas.azureedge.net/latest/data.schema.json
+
+# Supported paths include:
+# local: './<path>/<folder>' (this will be automatically uploaded to cloud storage)
+# blob:  'wasbs://<container_name>@<account_name>.blob.core.windows.net/<path>/<folder>'
+# ADLS gen2: 'abfss://<file_system>@<account_name>.dfs.core.windows.net/<path>/<folder>'
+# Datastore: 'azureml://datastores/<data_store_name>/paths/<path>/<folder>'
+
+type: uri_folder
+name: new-endijs-dataset-2
+version: 2
+description: images for root images and corresponding masks for segmentation
+path: "C:\\Users\\emilp\\Documents\\GitHub\\2024-25d-fai2-adsai-group-cv9 - Copymain\\AzureML\\endijs_dataset"

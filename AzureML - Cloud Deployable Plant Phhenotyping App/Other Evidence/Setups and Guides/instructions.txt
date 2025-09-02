@@ -1,0 +1,29 @@
+Pre-requisites:
+
+You have to install Docker Desktop. Guide available at https://docs.docker.com/get-started/get-docker/
+Also make sure to pip install docker to you environment!
+
+
+1. Go to the branch with API working and UI available (feature/dev-docker)
+   as it has updated app.py and other essentials, a bit different to the main branch...
+
+2. In PowerShell go to repo /AxonRooter> (for example for me: cd C:\Users\batkm\Documents\Github\2024-25d-fai2-adsai-group-cv9\AxonRooter)
+
+3. You have to have Docker Desktop open, and run the following commands:
+
+	- docker build -t axonrooter-api .       #(After a few minutes the container should have been created)
+	- docker run -p 8000:80 axonrooter-api
+
+4. The container is built and should run. You have the FastAPI Swagger at http://localhost:8000/docs
+
+					  or you can directly access the UI through http://localhost:8000/static/index.html
+
+
+NOTES:
+
+Once you've built the Docker successfully, if you want to rerun the image container you just have to run docker run -p 8000:80 axonrooter-api (the container already exists so no need for docker build -t axonrooter-api .) However make sure to have Docker Desktop open in the background...
+
+Also im pretty sure it should work even without your environment activated (just any that has installed docker with pip install docker)
+
+
+GPU-enabled: docker run --gpus all -p 8000:80 axonrooter-gpu

@@ -1,0 +1,421 @@
+[2025-06-27T00:30:14.544+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-27T00:30:14.581+0000] {__init__.py:54} DEBUG - Loading core task runner: StandardTaskRunner
+[2025-06-27T00:30:14.603+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-27T00:30:14.618+0000] {base_task_runner.py:73} DEBUG - Planning to run as the  user
+[2025-06-27T00:30:14.626+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-27T00:30:14.660+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-27T00:30:14.662+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Task Instance Not Running' PASSED: True, Task is not in running state.
+[2025-06-27T00:30:14.674+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-27T00:30:14.675+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-27T00:30:14.676+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Task Instance State' PASSED: True, Task state queued was valid.
+[2025-06-27T00:30:14.678+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]>
+[2025-06-27T00:30:14.691+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Pool Slots Available' PASSED: True, There are enough open slots in default_pool to execute the task
+[2025-06-27T00:30:14.692+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Task Concurrency' PASSED: True, Task concurrency is not set.
+[2025-06-27T00:30:14.697+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-27T00:30:14.698+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-27T00:30:14.699+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-27T00:30:14.701+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [queued]>
+[2025-06-27T00:30:14.701+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-27T00:30:14.727+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): run_retraining_pipeline> on 2025-06-27 00:30:05.212063+00:00
+[2025-06-27T00:30:14.749+0000] {standard_task_runner.py:63} INFO - Started process 1578 to run task
+[2025-06-27T00:30:14.756+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'axonrooter_weekly_retraining', 'run_retraining_pipeline', 'manual__2025-06-27T00:30:05.212063+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/retrain_og_dag.py', '--cfg-path', '/tmp/tmp8o7jxahx']
+[2025-06-27T00:30:14.762+0000] {standard_task_runner.py:91} INFO - Job 36: Subtask run_retraining_pipeline
+[2025-06-27T00:30:14.764+0000] {cli_action_loggers.py:70} DEBUG - Calling callbacks: [<function default_action_log at 0x7d08ca520ca0>]
+[2025-06-27T00:30:14.854+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-27T00:30:14.877+0000] {task_command.py:426} INFO - Running <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-27T00:30:05.212063+00:00 [running]> on host a0c5969eb7a0
+[2025-06-27T00:30:14.878+0000] {settings.py:363} DEBUG - Disposing DB connection pool (PID 1578)
+[2025-06-27T00:30:14.880+0000] {settings.py:250} DEBUG - Setting up DB connection pool (PID 1578)
+[2025-06-27T00:30:14.881+0000] {settings.py:298} DEBUG - settings.prepare_engine_args(): Using NullPool
+[2025-06-27T00:30:14.968+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-27T00:30:14.984+0000] {taskinstance.py:1845} DEBUG - Clearing XCom data
+[2025-06-27T00:30:15.017+0000] {retries.py:91} DEBUG - Running RenderedTaskInstanceFields.write with retries. Try 1 of 3
+[2025-06-27T00:30:15.065+0000] {retries.py:91} DEBUG - Running RenderedTaskInstanceFields._do_delete_old_records with retries. Try 1 of 3
+[2025-06-27T00:30:15.086+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='axonrooter_weekly_retraining' AIRFLOW_CTX_TASK_ID='run_retraining_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-06-27T00:30:05.212063+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-27T00:30:05.212063+00:00'
+[2025-06-27T00:30:15.088+0000] {__init__.py:119} DEBUG - Preparing lineage inlets and outlets
+[2025-06-27T00:30:15.090+0000] {__init__.py:158} DEBUG - inlets: [], outlets: []
+[2025-06-27T00:30:15.091+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-27T00:30:15.109+0000] {base.py:84} INFO - Using connection ID 'azure_ml_conn' for task execution.
+[2025-06-27T00:30:15.261+0000] {authority.py:75} DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886
+[2025-06-27T00:30:15.264+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2025-06-27T00:30:15.924+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '190c01f9-b7f6-4f5e-837f-9dda2edf7200'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Fri, 27 Jun 2025 00:30:14 GMT'
+    'Content-Length': '1753'
+[2025-06-27T00:30:15.930+0000] {authority.py:96} DEBUG - openid_config("https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0/.well-known/openid-configuration") = {'token_endpoint': '***', 'token_endpoint_auth_methods_supported': ['***', '***', '***'], 'jwks_uri': 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['***'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': '***', 'device_authorization_endpoint': '***', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/kerberos', 'tenant_region_scope': 'EU', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+[2025-06-27T00:30:15.932+0000] {application.py:705} DEBUG - Broker enabled? None
+[2025-06-27T00:30:15.934+0000] {application.py:755} DEBUG - Region to be used: None
+[2025-06-27T00:30:15.949+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: a6945ba9-334f-4261-b2d8-9974ebb76932
+[2025-06-27T00:30:15.951+0000] {_universal.py:508} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+A body is sent with the request
+[2025-06-27T00:30:16.049+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '94f193b7-f346-4fdd-b923-f534380e1c00'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Fri, 27 Jun 2025 00:30:14 GMT'
+    'Content-Length': '1676'
+[2025-06-27T00:30:16.052+0000] {token_cache.py:204} DEBUG - event={
+    "client_id": "27157a5a-3927-4895-8478-9d4554697d25",
+    "data": {
+        "claims": null,
+        "scope": [
+            "https://management.azure.com/.default"
+        ]
+    },
+    "environment": "login.microsoftonline.com",
+    "grant_type": "client_credentials",
+    "params": null,
+    "response": {
+        "access_token": "********",
+        "expires_in": 86399,
+        "ext_expires_in": 86399,
+        "refresh_in": 43199,
+        "token_type": "Bearer"
+    },
+    "scope": [
+        "https://management.azure.com/.default"
+    ],
+    "token_endpoint": "https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/oauth2/v2.0/token"
+}
+[2025-06-27T00:30:16.053+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token_info succeeded
+[2025-06-27T00:30:16.055+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/data?api-version=REDACTED&listViewType=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e5158bba-52ed-11f0-a8fe-22676b4511cb'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-27T00:30:16.666+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '25882'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '35222dcc-a44f-4b89-893d-04b7cda25e14'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 57BD75D3B7034E6D85D928144B077E01 Ref B: AMS231020512031 Ref C: 2025-06-27T00:30:15Z'
+    'Date': 'Fri, 27 Jun 2025 00:30:14 GMT'
+[2025-06-27T00:30:16.689+0000] {logging_mixin.py:188} INFO - Using latest data asset: axonrooter_student_corrections_student_20250626_232448 (version: None, type: uri_folder)
+[2025-06-27T00:30:16.694+0000] {logging_mixin.py:188} INFO - Latest data asset: Data({'path': None, 'skip_validation': False, 'mltable_schema_url': None, 'referenced_uris': None, 'type': 'uri_folder', 'is_anonymous': False, 'auto_increment_version': True, 'auto_delete_setting': None, 'name': 'axonrooter_student_corrections_student_20250626_232448', 'description': None, 'tags': {}, 'properties': {}, 'print_as_yaml': False, 'id': None, 'Resource__source_path': '', 'base_path': '/opt/***', 'creation_context': <azure.ai.ml.entities._system_data.SystemData object at 0x7d089608d630>, 'serialize': <msrest.serialization.Serializer object at 0x7d089608d720>, 'version': None, 'latest_version': '1', 'datastore': None})
+[2025-06-27T00:30:16.695+0000] {logging_mixin.py:188} INFO - Dataset ID: None
+[2025-06-27T00:30:16.696+0000] {logging_mixin.py:188} INFO - Dataset type: uri_folder
+[2025-06-27T00:30:16.699+0000] {application.py:1553} DEBUG - Cache hit an AT
+[2025-06-27T00:30:16.701+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: aa16f65c-cb43-41d8-9570-78e3f3cffee9
+[2025-06-27T00:30:16.702+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token_info succeeded
+[2025-06-27T00:30:16.703+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/components/train2/versions/5?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e5f107f8-52ed-11f0-a8fe-22676b4511cb'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-27T00:30:17.399+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1966'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'b6903aa8-0615-4e61-a3f0-3f8a658d888c'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: CD509EEC902B438EA58011B61B7E59C4 Ref B: AMS231022012051 Ref C: 2025-06-27T00:30:15Z'
+    'Date': 'Fri, 27 Jun 2025 00:30:16 GMT'
+[2025-06-27T00:30:17.457+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/components/evaluate2/versions/2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e664bffe-52ed-11f0-a8fe-22676b4511cb'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-27T00:30:17.789+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1957'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'ac2b6b57-5c0b-476b-aec4-a9225f0d63c1'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: 8F97B782F9B640A299E593E10E6B2AD8 Ref B: AMS231022012051 Ref C: 2025-06-27T00:30:16Z'
+    'Date': 'Fri, 27 Jun 2025 00:30:16 GMT'
+[2025-06-27T00:30:17.796+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/components/register2/versions/2%20?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e6987740-52ed-11f0-a8fe-22676b4511cb'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-27T00:30:18.090+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1942'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': '35563091-9ee8-453a-a2f8-2333e47eaafa'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: F4E56D0843F5489AA7783E7CE7D5456E Ref B: AMS231022012051 Ref C: 2025-06-27T00:30:16Z'
+    'Date': 'Fri, 27 Jun 2025 00:30:16 GMT'
+[2025-06-27T00:30:18.096+0000] {application.py:1553} DEBUG - Cache hit an AT
+[2025-06-27T00:30:18.098+0000] {telemetry.py:37} DEBUG - Generate or reuse correlation_id: 429bbe57-e2fc-4eab-91e3-e2f5242be02a
+[2025-06-27T00:30:18.099+0000] {get_token_mixin.py:148} INFO - ClientSecretCredential.get_token_info succeeded
+[2025-06-27T00:30:18.100+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/models/axonrooter-finetuned/versions/8?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e6c63b1c-52ed-11f0-a8fe-22676b4511cb'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-27T00:30:18.667+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '1214'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'e573ccb5-bbd5-4266-908b-9fad96df6cda'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: A370912D806E43DD8DA610F8B270B262 Ref B: AMS231032608031 Ref C: 2025-06-27T00:30:17Z'
+    'Date': 'Fri, 27 Jun 2025 00:30:17 GMT'
+[2025-06-27T00:30:18.673+0000] {logging_mixin.py:188} INFO - Pretrained model: Model({'job_name': None, 'intellectual_property': None, 'system_metadata': None, 'is_anonymous': False, 'auto_increment_version': False, 'auto_delete_setting': None, 'name': 'axonrooter-finetuned', 'description': 'Fine-tuned AxonRooter model with F1 score: 0.8542', 'tags': {}, 'properties': {}, 'print_as_yaml': False, 'id': '/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/models/axonrooter-finetuned/versions/8', 'Resource__source_path': '', 'base_path': '/opt/***', 'creation_context': <azure.ai.ml.entities._system_data.SystemData object at 0x7d089608e6b0>, 'serialize': <msrest.serialization.Serializer object at 0x7d089608e950>, 'version': '8', 'latest_version': None, 'path': 'azureml://subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/workspaces/CV9-2025/datastores/workspaceblobstore/paths/LocalUpload/44a545d5e4e063564f2d3431fd505798/INPUT_model', 'datastore': None, 'utc_time_created': None, 'flavors': None, 'arm_type': 'model_version', 'type': 'custom_model', 'stage': 'Development'})
+[2025-06-27T00:30:18.674+0000] {logging_mixin.py:188} INFO - Pretrained model path: azureml://subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/workspaces/CV9-2025/datastores/workspaceblobstore/paths/LocalUpload/44a545d5e4e063564f2d3431fd505798/INPUT_model
+[2025-06-27T00:30:19.796+0000] {retries.py:91} DEBUG - Running Job._fetch_from_db with retries. Try 1 of 3
+[2025-06-27T00:30:19.822+0000] {retries.py:91} DEBUG - Running Job._update_heartbeat with retries. Try 1 of 3
+[2025-06-27T00:30:19.852+0000] {job.py:214} DEBUG - [heartbeat]
+[2025-06-27T00:30:19.915+0000] {log.py:232} WARNING - Class AutoDeleteSettingSchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-27T00:30:19.927+0000] {log.py:232} WARNING - Class AutoDeleteConditionSchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-27T00:30:19.940+0000] {log.py:232} WARNING - Class BaseAutoDeleteSettingSchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-27T00:30:19.960+0000] {log.py:232} WARNING - Class IntellectualPropertySchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-27T00:30:19.970+0000] {log.py:232} WARNING - Class ProtectionLevelSchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-27T00:30:19.981+0000] {log.py:232} WARNING - Class BaseIntellectualPropertySchema: This is an experimental class, and may change at any time. Please see https://aka.ms/azuremlexperimental for more information.
+[2025-06-27T00:30:19.996+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-27T00:30:19.997+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-27T00:30:20.004+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-27T00:30:20.005+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-27T00:30:20.008+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-27T00:30:20.009+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-27T00:30:20.068+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-27T00:30:20.069+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-27T00:30:20.104+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-27T00:30:20.105+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-27T00:30:20.131+0000] {_attr_dict.py:109} DEBUG - getting schema_ignored
+[2025-06-27T00:30:20.132+0000] {_attr_dict.py:122} DEBUG - setting schema_ignored to {}
+[2025-06-27T00:30:20.156+0000] {_universal.py:511} INFO - Request URL: 'https://management.azure.com/subscriptions/0a94de80-6d3b-49f2-b3e9-ec5818862801/resourceGroups/buas-y2/providers/Microsoft.MachineLearningServices/workspaces/CV9-2025/computes/adsai-lambda-2?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e8007cae-52ed-11f0-a8fe-22676b4511cb'
+    'User-Agent': 'azure-ai-ml/1.27.1 azsdk-python-mgmt-machinelearningservices/0.1.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2025-06-27T00:30:20.638+0000] {_universal.py:547} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Content-Length': '2753'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-reads': '249'
+    'x-ms-operation-identifier': 'REDACTED'
+    'Request-Context': 'REDACTED'
+    'x-ms-response-type': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'azureml-served-by-cluster': 'REDACTED'
+    'x-request-time': 'REDACTED'
+    'x-ms-ratelimit-remaining-subscription-global-reads': 'REDACTED'
+    'x-ms-request-id': 'f5792a6c-af91-45a2-a929-94cb491cb591'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'x-ms-routing-request-id': 'REDACTED'
+    'X-Cache': 'REDACTED'
+    'X-MSEdge-Ref': 'Ref A: A4A0200392DC409DA9A28DECE3ECE6DB Ref B: AMS231032608031 Ref C: 2025-06-27T00:30:18Z'
+    'Date': 'Fri, 27 Jun 2025 00:30:18 GMT'
+[2025-06-27T00:30:20.648+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-27T00:30:20.649+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_job_operations.py", line 680, in create_or_update
+    self._resolve_arm_id_or_upload_dependencies(job)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_job_operations.py", line 1137, in _resolve_arm_id_or_upload_dependencies
+    self._resolve_arm_id_or_azureml_id(job, self._orchestrators.get_asset_arm_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_job_operations.py", line 1428, in _resolve_arm_id_or_azureml_id
+    job = self._resolve_arm_id_for_pipeline_job(job, resolver)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_job_operations.py", line 1617, in _resolve_arm_id_for_pipeline_job
+    self._component_operations._resolve_dependencies_for_pipeline_component_jobs(
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_component_operations.py", line 1152, in _resolve_dependencies_for_pipeline_component_jobs
+    self._resolve_inputs_for_pipeline_component_jobs(component.jobs, component._base_path)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_component_operations.py", line 903, in _resolve_inputs_for_pipeline_component_jobs
+    self._job_operations._resolve_job_inputs(
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_job_operations.py", line 1255, in _resolve_job_inputs
+    self._resolve_job_input(entry, base_path)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_job_operations.py", line 1295, in _resolve_job_input
+    raise ValidationException(
+azure.ai.ml.exceptions.ValidationException: Input path can't be empty for jobs.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/retrain_og_dag.py", line 81, in run_pipeline
+    ml_client.jobs.create_or_update(job, experiment_name="axonrooter_weekly_retrain")
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/tracing/decorator.py", line 119, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/_telemetry/activity.py", line 371, in wrapper
+    return_value = f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_job_operations.py", line 682, in create_or_update
+    log_and_raise_error(ex)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/_exception_helper.py", line 337, in log_and_raise_error
+    raise MlException(message=formatted_error, no_personal_data_message=formatted_error)
+azure.ai.ml.exceptions.MlException: 
+[37m
+[30m
+1) At least one required parameter is missing[39m[39m
+
+Details: 
+
+[31m(x) Input path can't be empty for jobs.[39m
+
+Resolutions: 
+1) Ensure all parameters required by the Job schema are specified.
+If using the CLI, you can also check the full log in debug mode for more details by adding --debug to the end of your command
+
+Additional Resources: The easiest way to author a yaml specification file is using IntelliSense and auto-completion Azure ML VS code extension provides: [36mhttps://code.visualstudio.com/docs/datascience/azure-machine-learning.[39m To set up VS Code, visit [36mhttps://learn.microsoft.com/azure/machine-learning/how-to-setup-vs-code[39m
+
+[2025-06-27T00:30:20.671+0000] {taskinstance.py:562} DEBUG - Task Duration set to 5.9924
+[2025-06-27T00:30:20.673+0000] {taskinstance.py:584} DEBUG - Clearing next_method and next_kwargs.
+[2025-06-27T00:30:20.675+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=axonrooter_weekly_retraining, task_id=run_retraining_pipeline, run_id=manual__2025-06-27T00:30:05.212063+00:00, execution_date=20250627T003005, start_date=20250627T003014, end_date=20250627T003020
+[2025-06-27T00:30:20.707+0000] {cli_action_loggers.py:88} DEBUG - Calling callbacks: []
+[2025-06-27T00:30:20.708+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 36 for task run_retraining_pipeline (
+[37m
+[30m
+1) At least one required parameter is missing[39m[39m
+
+Details: 
+
+[31m(x) Input path can't be empty for jobs.[39m
+
+Resolutions: 
+1) Ensure all parameters required by the Job schema are specified.
+If using the CLI, you can also check the full log in debug mode for more details by adding --debug to the end of your command
+
+Additional Resources: The easiest way to author a yaml specification file is using IntelliSense and auto-completion Azure ML VS code extension provides: [36mhttps://code.visualstudio.com/docs/datascience/azure-machine-learning.[39m To set up VS Code, visit [36mhttps://learn.microsoft.com/azure/machine-learning/how-to-setup-vs-code[39m
+; 1578)
+[2025-06-27T00:30:20.790+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-27T00:30:20.818+0000] {dagrun.py:932} DEBUG - number of tis tasks for <DagRun axonrooter_weekly_retraining @ 2025-06-27 00:30:05.212063+00:00: manual__2025-06-27T00:30:05.212063+00:00, state:running, queued_at: 2025-06-27 00:30:05.306314+00:00. externally triggered: True>: 0 task(s)
+[2025-06-27T00:30:20.819+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-27T00:30:20.822+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

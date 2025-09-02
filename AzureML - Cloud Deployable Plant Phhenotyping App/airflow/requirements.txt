@@ -1,0 +1,6 @@
+azure-ai-ml
+azure-core
+apache-airflow==2.9.1
+azure-identity
+
+

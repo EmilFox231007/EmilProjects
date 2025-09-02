@@ -1,0 +1,76 @@
+[2025-06-26T17:02:44.405+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-26T17:02:44.440+0000] {__init__.py:54} DEBUG - Loading core task runner: StandardTaskRunner
+[2025-06-26T17:02:44.471+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-26T17:02:44.483+0000] {base_task_runner.py:73} DEBUG - Planning to run as the  user
+[2025-06-26T17:02:44.492+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-26T17:02:44.527+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-26T17:02:44.537+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-26T17:02:44.538+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Task Instance State' PASSED: True, Task state queued was valid.
+[2025-06-26T17:02:44.539+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-26T17:02:44.541+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Task Instance Not Running' PASSED: True, Task is not in running state.
+[2025-06-26T17:02:44.541+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]>
+[2025-06-26T17:02:44.546+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-26T17:02:44.550+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-26T17:02:44.551+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-26T17:02:44.557+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Pool Slots Available' PASSED: True, There are enough open slots in default_pool to execute the task
+[2025-06-26T17:02:44.558+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]> dependency 'Task Concurrency' PASSED: True, Task concurrency is not set.
+[2025-06-26T17:02:44.559+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [queued]>
+[2025-06-26T17:02:44.560+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-26T17:02:44.580+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): run_retraining_pipeline> on 2025-06-26 17:02:24.514026+00:00
+[2025-06-26T17:02:44.603+0000] {standard_task_runner.py:63} INFO - Started process 211 to run task
+[2025-06-26T17:02:44.611+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'axonrooter_weekly_retraining', 'run_retraining_pipeline', 'manual__2025-06-26T17:02:24.514026+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/retrain_dag.py', '--cfg-path', '/tmp/tmp6ebaec04']
+[2025-06-26T17:02:44.618+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask run_retraining_pipeline
+[2025-06-26T17:02:44.621+0000] {cli_action_loggers.py:70} DEBUG - Calling callbacks: [<function default_action_log at 0x790b6bb1cca0>]
+[2025-06-26T17:02:44.710+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-26T17:02:44.726+0000] {task_command.py:426} INFO - Running <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [running]> on host 1fc71c0f6201
+[2025-06-26T17:02:44.727+0000] {settings.py:363} DEBUG - Disposing DB connection pool (PID 211)
+[2025-06-26T17:02:44.728+0000] {settings.py:250} DEBUG - Setting up DB connection pool (PID 211)
+[2025-06-26T17:02:44.728+0000] {settings.py:298} DEBUG - settings.prepare_engine_args(): Using NullPool
+[2025-06-26T17:02:44.794+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-26T17:02:44.798+0000] {taskinstance.py:1845} DEBUG - Clearing XCom data
+[2025-06-26T17:02:44.815+0000] {retries.py:91} DEBUG - Running RenderedTaskInstanceFields.write with retries. Try 1 of 3
+[2025-06-26T17:02:44.854+0000] {retries.py:91} DEBUG - Running RenderedTaskInstanceFields._do_delete_old_records with retries. Try 1 of 3
+[2025-06-26T17:02:44.874+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='axonrooter_weekly_retraining' AIRFLOW_CTX_TASK_ID='run_retraining_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-06-26T17:02:24.514026+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-26T17:02:24.514026+00:00'
+[2025-06-26T17:02:44.877+0000] {__init__.py:119} DEBUG - Preparing lineage inlets and outlets
+[2025-06-26T17:02:44.879+0000] {__init__.py:158} DEBUG - inlets: [], outlets: []
+[2025-06-26T17:02:44.881+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-26T17:02:44.899+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-26T17:02:44.916+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/retrain_dag.py", line 45, in run_pipeline
+    ml_client = get_ml_client()
+  File "/opt/airflow/dags/retrain_dag.py", line 30, in get_ml_client
+    conn = BaseHook.get_connection("azure_ml_conn")
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/connection.py", line 519, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `azure_ml_conn` isn't defined
+[2025-06-26T17:02:44.931+0000] {taskinstance.py:562} DEBUG - Task Duration set to 0.388029
+[2025-06-26T17:02:44.933+0000] {taskinstance.py:584} DEBUG - Clearing next_method and next_kwargs.
+[2025-06-26T17:02:44.934+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=axonrooter_weekly_retraining, task_id=run_retraining_pipeline, run_id=manual__2025-06-26T17:02:24.514026+00:00, execution_date=20250626T170224, start_date=20250626T170244, end_date=20250626T170244
+[2025-06-26T17:02:44.958+0000] {cli_action_loggers.py:88} DEBUG - Calling callbacks: []
+[2025-06-26T17:02:44.959+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 3 for task run_retraining_pipeline (The conn_id `azure_ml_conn` isn't defined; 211)
+[2025-06-26T17:02:45.024+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-26T17:02:45.060+0000] {dagrun.py:932} DEBUG - number of tis tasks for <DagRun axonrooter_weekly_retraining @ 2025-06-26 17:02:24.514026+00:00: manual__2025-06-26T17:02:24.514026+00:00, state:running, queued_at: 2025-06-26 17:02:24.664636+00:00. externally triggered: True>: 2 task(s)
+[2025-06-26T17:02:45.061+0000] {dagrun.py:953} DEBUG - number of scheduleable tasks for <DagRun axonrooter_weekly_retraining @ 2025-06-26 17:02:24.514026+00:00: manual__2025-06-26T17:02:24.514026+00:00, state:running, queued_at: 2025-06-26 17:02:24.664636+00:00. externally triggered: True>: 2 task(s)
+[2025-06-26T17:02:45.062+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [up_for_retry]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-26T17:02:45.062+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [up_for_retry]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-26T17:02:45.063+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [up_for_retry]> dependency 'Not In Retry Period' PASSED: False, Task is not ready for retry yet but will be retried automatically. Current date is 2025-06-26T17:02:45.063515+00:00 and task will be retried at 2025-06-26T17:07:44.930938+00:00.
+[2025-06-26T17:02:45.064+0000] {taskinstance.py:2066} DEBUG - Dependencies not met for <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-26T17:02:24.514026+00:00 [up_for_retry]>, dependency 'Not In Retry Period' FAILED: Task is not ready for retry yet but will be retried automatically. Current date is 2025-06-26T17:02:45.063515+00:00 and task will be retried at 2025-06-26T17:07:44.930938+00:00.
+[2025-06-26T17:02:45.065+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.promote_model_to_green manual__2025-06-26T17:02:24.514026+00:00 [None]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-26T17:02:45.066+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.promote_model_to_green manual__2025-06-26T17:02:24.514026+00:00 [None]> dependency 'Trigger Rule' PASSED: False, Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'run_retraining_pipeline'}
+[2025-06-26T17:02:45.067+0000] {taskinstance.py:2066} DEBUG - Dependencies not met for <TaskInstance: axonrooter_weekly_retraining.promote_model_to_green manual__2025-06-26T17:02:24.514026+00:00 [None]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0, success_setup=0, skipped_setup=0), upstream_task_ids={'run_retraining_pipeline'}
+[2025-06-26T17:02:45.067+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.promote_model_to_green manual__2025-06-26T17:02:24.514026+00:00 [None]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-26T17:02:45.079+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-26T17:02:45.082+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

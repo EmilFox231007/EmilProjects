@@ -1,0 +1,29 @@
+name: register2
+version: 2
+display_name: Register model
+type: command
+is_deterministic: true
+
+inputs:
+  model:
+    type: uri_folder
+    optional: false
+  accuracy:
+    type: uri_folder
+    optional: false
+  tags:
+    type: string
+    optional: true
+
+code: C:/Users/emilp/Documents/GitHub/2024-25d-fai2-adsai-group-cv9/AxonRooter/src/axonrooter
+
+environment: azureml:my-custom-env-2:1.11
+
+command: >
+  python register.py
+  --model ${{inputs.model}}
+  --accuracy ${{inputs.accuracy}}
+  $[[--tags ${{inputs.tags}}]]
+
+resources:
+  instance_count: 1

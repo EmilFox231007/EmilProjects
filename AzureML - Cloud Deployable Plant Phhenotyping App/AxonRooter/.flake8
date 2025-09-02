@@ -1,0 +1,7 @@
+'''sets the maximum line length for Flake 8 to 88 characters (which is the same as Black)
+and disables certain Flake 8 rules that conflict with Black’s formatting.
+'''
+
+[flake8]
+max-line-length = 88
+extend-ignore = E203, W503, E501, F401

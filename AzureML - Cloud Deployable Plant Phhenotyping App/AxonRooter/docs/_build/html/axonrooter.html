@@ -1,0 +1,954 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>axonrooter package &mdash; AxonRooter  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="axonrooter.api package" href="axonrooter.api.html" />
+    <link rel="prev" title="axonrooter" href="modules.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+          <a href="index.html" class="icon icon-home">
+            AxonRooter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">axonrooter</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">axonrooter package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.api.html">axonrooter.api package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.app.html">axonrooter.app package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.data.html">axonrooter.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.models.html">axonrooter.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html">axonrooter.streamlit_drawable_canvas package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.utils.html">axonrooter.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-axonrooter.cli">axonrooter.cli module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.cli.infer"><code class="docutils literal notranslate"><span class="pre">infer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-axonrooter.evaluate">axonrooter.evaluate module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.evaluate.f1"><code class="docutils literal notranslate"><span class="pre">f1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.evaluate.load_patched_data_no_filter"><code class="docutils literal notranslate"><span class="pre">load_patched_data_no_filter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.evaluate.evaluate"><code class="docutils literal notranslate"><span class="pre">evaluate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-axonrooter.logging_config">axonrooter.logging_config module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.logging_config.setup_logging"><code class="docutils literal notranslate"><span class="pre">setup_logging()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.logging_config.configure_logging"><code class="docutils literal notranslate"><span class="pre">configure_logging()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-axonrooter.predict">axonrooter.predict module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.predict.predict_root_tips"><code class="docutils literal notranslate"><span class="pre">predict_root_tips()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-axonrooter.register">axonrooter.register module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.register.register_model_if_accuracy_good"><code class="docutils literal notranslate"><span class="pre">register_model_if_accuracy_good()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-axonrooter.scoring">axonrooter.scoring module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.scoring.f1"><code class="docutils literal notranslate"><span class="pre">f1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.scoring.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.scoring.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-axonrooter.train">axonrooter.train module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.train.f1"><code class="docutils literal notranslate"><span class="pre">f1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.train.load_data"><code class="docutils literal notranslate"><span class="pre">load_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.train.run_training"><code class="docutils literal notranslate"><span class="pre">run_training()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-axonrooter">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.run_inference"><code class="docutils literal notranslate"><span class="pre">run_inference()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.extract_bottom_tips"><code class="docutils literal notranslate"><span class="pre">extract_bottom_tips()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.crop_initial"><code class="docutils literal notranslate"><span class="pre">crop_initial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.find_edges"><code class="docutils literal notranslate"><span class="pre">find_edges()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.format_crop"><code class="docutils literal notranslate"><span class="pre">format_crop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.padding_function"><code class="docutils literal notranslate"><span class="pre">padding_function()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.load_and_preprocess_image"><code class="docutils literal notranslate"><span class="pre">load_and_preprocess_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.calculate_iou"><code class="docutils literal notranslate"><span class="pre">calculate_iou()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.apply_strict_bboxes"><code class="docutils literal notranslate"><span class="pre">apply_strict_bboxes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axonrooter.preprocess_closing"><code class="docutils literal notranslate"><span class="pre">preprocess_closing()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AxonRooter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">axonrooter</a></li>
+      <li class="breadcrumb-item active">axonrooter package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/axonrooter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="axonrooter-package">
+<h1>axonrooter package<a class="headerlink" href="#axonrooter-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="axonrooter.api.html">axonrooter.api package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.api.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.api.html#module-axonrooter.api.main">axonrooter.api.main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.api.html#axonrooter.api.main.convert_numpy"><code class="docutils literal notranslate"><span class="pre">convert_numpy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.api.html#axonrooter.api.main.health"><code class="docutils literal notranslate"><span class="pre">health()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.api.html#axonrooter.api.main.predict"><code class="docutils literal notranslate"><span class="pre">predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.api.html#module-axonrooter.api">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="axonrooter.app.html">axonrooter.app package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.app.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.app.html#module-axonrooter.app.app">axonrooter.app.app module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.get_base64_image"><code class="docutils literal notranslate"><span class="pre">get_base64_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.initialize_session_state"><code class="docutils literal notranslate"><span class="pre">initialize_session_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.add_frontend_log"><code class="docutils literal notranslate"><span class="pre">add_frontend_log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.render_homepage"><code class="docutils literal notranslate"><span class="pre">render_homepage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.update_progress_with_details"><code class="docutils literal notranslate"><span class="pre">update_progress_with_details()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.create_azure_ml_yml"><code class="docutils literal notranslate"><span class="pre">create_azure_ml_yml()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.find_azure_cli_path"><code class="docutils literal notranslate"><span class="pre">find_azure_cli_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.test_azure_cli_connection"><code class="docutils literal notranslate"><span class="pre">test_azure_cli_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.upload_files_to_azure_datastore"><code class="docutils literal notranslate"><span class="pre">upload_files_to_azure_datastore()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.test_azure_cli_connection_with_workspace"><code class="docutils literal notranslate"><span class="pre">test_azure_cli_connection_with_workspace()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.get_base_id"><code class="docutils literal notranslate"><span class="pre">get_base_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.match_image_mask_pairs"><code class="docutils literal notranslate"><span class="pre">match_image_mask_pairs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.split_pairs"><code class="docutils literal notranslate"><span class="pre">split_pairs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.upload_with_azcopy"><code class="docutils literal notranslate"><span class="pre">upload_with_azcopy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.register_dataset_with_azure_ml"><code class="docutils literal notranslate"><span class="pre">register_dataset_with_azure_ml()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.render_prediction_page"><code class="docutils literal notranslate"><span class="pre">render_prediction_page()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.render_results_section"><code class="docutils literal notranslate"><span class="pre">render_results_section()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.parse_log_line"><code class="docutils literal notranslate"><span class="pre">parse_log_line()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.read_backend_logs"><code class="docutils literal notranslate"><span class="pre">read_backend_logs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.render_logging_page"><code class="docutils literal notranslate"><span class="pre">render_logging_page()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.create_drawing_canvas"><code class="docutils literal notranslate"><span class="pre">create_drawing_canvas()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.create_inline_drawing_controls"><code class="docutils literal notranslate"><span class="pre">create_inline_drawing_controls()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.convert_mask_to_canvas_json"><code class="docutils literal notranslate"><span class="pre">convert_mask_to_canvas_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.update_canvas_with_prediction_mask"><code class="docutils literal notranslate"><span class="pre">update_canvas_with_prediction_mask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.render_mask_submit_page"><code class="docutils literal notranslate"><span class="pre">render_mask_submit_page()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.app.html#axonrooter.app.app.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.app.html#module-axonrooter.app">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="axonrooter.data.html">axonrooter.data package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.data.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.data.html#module-axonrooter.data.preprocessing">axonrooter.data.preprocessing module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.preprocessing.crop_initial"><code class="docutils literal notranslate"><span class="pre">crop_initial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.preprocessing.find_edges"><code class="docutils literal notranslate"><span class="pre">find_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.preprocessing.format_crop"><code class="docutils literal notranslate"><span class="pre">format_crop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.preprocessing.padding_function"><code class="docutils literal notranslate"><span class="pre">padding_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.preprocessing.load_and_preprocess_image"><code class="docutils literal notranslate"><span class="pre">load_and_preprocess_image()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.data.html#module-axonrooter.data">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.crop_initial"><code class="docutils literal notranslate"><span class="pre">crop_initial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.find_edges"><code class="docutils literal notranslate"><span class="pre">find_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.format_crop"><code class="docutils literal notranslate"><span class="pre">format_crop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.padding_function"><code class="docutils literal notranslate"><span class="pre">padding_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.data.html#axonrooter.data.load_and_preprocess_image"><code class="docutils literal notranslate"><span class="pre">load_and_preprocess_image()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="axonrooter.models.html">axonrooter.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.models.html#module-axonrooter.models.inference">axonrooter.models.inference module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.inference.load_model_from_azure"><code class="docutils literal notranslate"><span class="pre">load_model_from_azure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.inference.load_local_model"><code class="docutils literal notranslate"><span class="pre">load_local_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.inference.initialize_model"><code class="docutils literal notranslate"><span class="pre">initialize_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.inference.get_model"><code class="docutils literal notranslate"><span class="pre">get_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.inference.get_model_info"><code class="docutils literal notranslate"><span class="pre">get_model_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.inference.refresh_model"><code class="docutils literal notranslate"><span class="pre">refresh_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.inference.run_inference"><code class="docutils literal notranslate"><span class="pre">run_inference()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.models.html#module-axonrooter.models.tips">axonrooter.models.tips module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.tips.extract_bottom_tips"><code class="docutils literal notranslate"><span class="pre">extract_bottom_tips()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.models.html#module-axonrooter.models">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.run_inference"><code class="docutils literal notranslate"><span class="pre">run_inference()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.models.html#axonrooter.models.extract_bottom_tips"><code class="docutils literal notranslate"><span class="pre">extract_bottom_tips()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html">axonrooter.streamlit_drawable_canvas package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#module-axonrooter.streamlit_drawable_canvas.st_canvas">axonrooter.streamlit_drawable_canvas.st_canvas module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#axonrooter.streamlit_drawable_canvas.st_canvas.st_canvas"><code class="docutils literal notranslate"><span class="pre">st_canvas()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#module-axonrooter.streamlit_drawable_canvas">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#axonrooter.streamlit_drawable_canvas.CanvasResult"><code class="docutils literal notranslate"><span class="pre">CanvasResult</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#axonrooter.streamlit_drawable_canvas.CanvasResult.image_data"><code class="docutils literal notranslate"><span class="pre">CanvasResult.image_data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#axonrooter.streamlit_drawable_canvas.CanvasResult.json_data"><code class="docutils literal notranslate"><span class="pre">CanvasResult.json_data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#id0"><code class="docutils literal notranslate"><span class="pre">CanvasResult.image_data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#id1"><code class="docutils literal notranslate"><span class="pre">CanvasResult.json_data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.streamlit_drawable_canvas.html#axonrooter.streamlit_drawable_canvas.CanvasResult.__init__"><code class="docutils literal notranslate"><span class="pre">CanvasResult.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="axonrooter.utils.html">axonrooter.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.utils.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.utils.types.html">axonrooter.utils.types package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="axonrooter.utils.types.html#module-axonrooter.utils.types">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.utils.html#module-axonrooter.utils.bboxes">axonrooter.utils.bboxes module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.utils.html#axonrooter.utils.bboxes.calculate_iou"><code class="docutils literal notranslate"><span class="pre">calculate_iou()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.utils.html#axonrooter.utils.bboxes.apply_strict_bboxes_with_top_cutoff_and_proximity"><code class="docutils literal notranslate"><span class="pre">apply_strict_bboxes_with_top_cutoff_and_proximity()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.utils.html#module-axonrooter.utils.morphology">axonrooter.utils.morphology module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.utils.html#axonrooter.utils.morphology.preprocess_single_mask"><code class="docutils literal notranslate"><span class="pre">preprocess_single_mask()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="axonrooter.utils.html#module-axonrooter.utils">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.utils.html#axonrooter.utils.calculate_iou"><code class="docutils literal notranslate"><span class="pre">calculate_iou()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.utils.html#axonrooter.utils.apply_strict_bboxes_with_top_cutoff_and_proximity"><code class="docutils literal notranslate"><span class="pre">apply_strict_bboxes_with_top_cutoff_and_proximity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="axonrooter.utils.html#axonrooter.utils.preprocess_single_mask"><code class="docutils literal notranslate"><span class="pre">preprocess_single_mask()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-axonrooter.cli">
+<span id="axonrooter-cli-module"></span><h2>axonrooter.cli module<a class="headerlink" href="#module-axonrooter.cli" title="Link to this heading"></a></h2>
+<p>Command-line interface for AxonRooter root tip detection.</p>
+<p>Supports inference from real images or synthetic simulations, and can optionally
+output the detected root tips as JSON.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.cli.infer">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.cli.</span></span><span class="sig-name descname"><span class="pre">infer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infer:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;typer.models.OptionInfo</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.cli.infer" title="Link to this definition"></a></dt>
+<dd><p>Run inference on a given image to detect root tip coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>infer</strong> (<em>str</em>) – Path to the input image file. Supported formats: PNG, JPG, JPEG, TIFF.</p></li>
+<li><p><strong>output</strong> (<em>#</em>)</p></li>
+<li><p><strong>out</strong><strong>)</strong> (<em>#     Optional path to save the output results as JSON.</em><em> (</em><em>Currently commented</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>typer.Exit</strong> – Exits with code 1 if the input file is missing, has unsupported file type,
+    or an unexpected error occurs during processing.
+    Exits with code 0 if no root tips are detected.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Logs the detected root tip coordinates at INFO level.</p>
+</dd></dl>
+
+</section>
+<section id="module-axonrooter.evaluate">
+<span id="axonrooter-evaluate-module"></span><h2>axonrooter.evaluate module<a class="headerlink" href="#module-axonrooter.evaluate" title="Link to this heading"></a></h2>
+<p>Script for evaluating a patch-based image segmentation model.</p>
+<p>This script loads a pre-trained TensorFlow/Keras model, applies it to a test dataset
+of grayscale images and masks, evaluates performance using F1 score and accuracy,
+and saves prediction visualizations and metrics. It includes:
+- A custom F1 metric for Keras
+- A data loader that splits images and masks into non-overlapping patches
+- Evaluation logic including metric computation and result saving</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.evaluate.f1">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.evaluate.</span></span><span class="sig-name descname"><span class="pre">f1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.evaluate.f1" title="Link to this definition"></a></dt>
+<dd><p>Computes the F1 score as a custom Keras metric.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – Ground truth labels.</p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – Predicted labels.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F1 score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.evaluate.load_patched_data_no_filter">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.evaluate.</span></span><span class="sig-name descname"><span class="pre">load_patched_data_no_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.evaluate.load_patched_data_no_filter" title="Link to this definition"></a></dt>
+<dd><p>Loads grayscale images and masks from disk, applies patching, and returns arrays of patches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_dir</strong> (<em>str</em>) – Directory containing the input images.</p></li>
+<li><p><strong>mask_dir</strong> (<em>str</em>) – Directory containing the corresponding masks.</p></li>
+<li><p><strong>patch_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of the square patches to extract, by default 256.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing:
+- images (np.ndarray): Array of image patches with shape (N, patch_size, patch_size, 3)
+- masks (np.ndarray): Array of mask patches with shape (N, patch_size, patch_size, 1)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple of np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.evaluate.evaluate">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.evaluate.</span></span><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_data_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.evaluate.evaluate" title="Link to this definition"></a></dt>
+<dd><p>Loads a model and evaluates it on the test dataset by computing F1 and accuracy scores.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_path</strong> (<em>str</em>) – Path to the trained model directory (expects <cite>model.keras</cite> inside).</p></li>
+<li><p><strong>test_data_dir</strong> (<em>str</em>) – Directory containing ‘test_images’ and ‘test_masks’ subdirectories.</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – Directory where evaluation metrics and prediction visualizations will be saved.</p></li>
+<li><p><strong>patch_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of the patches for splitting test images, by default 256.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If no test patches are found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-axonrooter.logging_config">
+<span id="axonrooter-logging-config-module"></span><h2>axonrooter.logging_config module<a class="headerlink" href="#module-axonrooter.logging_config" title="Link to this heading"></a></h2>
+<p>The configuration file for logging in this project.
+To change logs level for debug, change the level parameter in the setup_logging function to logging.DEBUG</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.logging_config.setup_logging">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.logging_config.</span></span><span class="sig-name descname"><span class="pre">setup_logging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'logs/app.log'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.logging_config.setup_logging" title="Link to this definition"></a></dt>
+<dd><p>Set up logging to both console and a file with a unified format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>level</strong> (<em>int</em><em>, </em><em>optional</em>) – Logging level (e.g., logging.INFO, logging.DEBUG). Default is logging.INFO.</p></li>
+<li><p><strong>log_file</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the log file where logs will be saved. Default is “logs/app.log”.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>Existing handlers are cleared before setting new ones.</p></li>
+<li><p>Logs will be printed to both the console and the specified file.</p></li>
+<li><p>The log format includes timestamps, log level, logger name, and message.</p></li>
+<li><p>Creates the log directory if it does not exist.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.logging_config.configure_logging">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.logging_config.</span></span><span class="sig-name descname"><span class="pre">configure_logging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.logging_config.configure_logging" title="Link to this definition"></a></dt>
+<dd><p>Configure basic logging settings or disable logging entirely.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – If False, disables all logging below CRITICAL. Default is True.</p></li>
+<li><p><strong>level</strong> (<em>int</em><em>, </em><em>optional</em>) – Logging level to set if logging is enabled. Default is logging.INFO.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function is a simpler alternative to <cite>setup_logging</cite> and does not
+set up custom handlers or formatting.</p>
+</dd></dl>
+
+</section>
+<section id="module-axonrooter.predict">
+<span id="axonrooter-predict-module"></span><h2>axonrooter.predict module<a class="headerlink" href="#module-axonrooter.predict" title="Link to this heading"></a></h2>
+<p>Core inference pipeline for AxonRooter.</p>
+<p>This module defines the <cite>predict_root_tips</cite> function, which runs the full
+pipeline to detect root tip coordinates from either a real image or a
+simulation plate. Steps include cropping, padding, model inference,
+morphological cleaning, bounding box filtering, and tip extraction.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.predict.predict_root_tips">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.predict.</span></span><span class="sig-name descname"><span class="pre">predict_root_tips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.predict.predict_root_tips" title="Link to this definition"></a></dt>
+<dd><p>Predicts root tip coordinates from an input image.</p>
+<p>This function processes the given image through a root detection pipeline,
+including cropping, formatting, padding, inference, and post-processing
+to extract bottom tip coordinates of detected root structures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>str</em>) – Path to the input image file. The image should be in a format
+readable by OpenCV (e.g., .png, .jpg).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tips</strong> – A list of (x, y) coordinate tuples representing the positions of
+detected root tips.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of tuple of int</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If the specified image file does not exist.</p></li>
+<li><p><strong>ValueError</strong> – If the image cannot be loaded (e.g., unsupported format or corrupted file).</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The pipeline assumes the input image is in grayscale or convertible to grayscale.
+Internally, it applies a series of transformations including:
+- Cropping the root region
+- Formatting and padding the image
+- Running a prediction model to generate a mask
+- Post-processing the mask to extract root tips</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">crop_initial</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">format_crop</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">padding_function</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">run_inference</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">preprocess_single_mask</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_strict_bboxes_with_top_cutoff_and_proximity</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_bottom_tips</span></code></p>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-axonrooter.register">
+<span id="axonrooter-register-module"></span><h2>axonrooter.register module<a class="headerlink" href="#module-axonrooter.register" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.register.register_model_if_accuracy_good">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.register.</span></span><span class="sig-name descname"><span class="pre">register_model_if_accuracy_good</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'{}'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.register.register_model_if_accuracy_good" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-axonrooter.scoring">
+<span id="axonrooter-scoring-module"></span><h2>axonrooter.scoring module<a class="headerlink" href="#module-axonrooter.scoring" title="Link to this heading"></a></h2>
+<p>Azure ML-compatible script to load a Keras image segmentation model and serve predictions.</p>
+<p>This script performs the following:
+1. Loads a <cite>.keras</cite> model with a custom F1 metric from the environment path.
+2. Accepts a base64-encoded grayscale image.
+3. Pads, normalizes, and splits the image into 256x256 RGB patches.
+4. Uses the model to predict segmentation masks per patch.
+5. Reconstructs the full-sized binary mask from patches and removes padding.
+6. Returns a base64-encoded PNG mask.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.scoring.f1">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.scoring.</span></span><span class="sig-name descname"><span class="pre">f1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.scoring.f1" title="Link to this definition"></a></dt>
+<dd><p>Compute F1 score metric used during model training.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – Ground truth binary labels.</p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – Predicted binary labels.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Computed F1 score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.scoring.init">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.scoring.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.scoring.init" title="Link to this definition"></a></dt>
+<dd><p>Initialize the global segmentation model by loading a <cite>.keras</cite> file
+from the AzureML model directory specified in the <cite>AZUREML_MODEL_DIR</cite>
+environment variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If no model file is found.</p></li>
+<li><p><strong>RuntimeError</strong> – If model loading fails.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.scoring.run">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.scoring.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.scoring.run" title="Link to this definition"></a></dt>
+<dd><p>Run segmentation inference on a base64-encoded grayscale image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>raw_data</strong> (<em>str</em>) – JSON-formatted string with a single key <cite>“data”</cite> containing a base64-encoded image.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON-formatted string with the key <cite>“predicted_mask_base64”</cite> or <cite>“error”</cite> if failed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-axonrooter.train">
+<span id="axonrooter-train-module"></span><h2>axonrooter.train module<a class="headerlink" href="#module-axonrooter.train" title="Link to this heading"></a></h2>
+<p>Train a patch-based segmentation model using grayscale root images and binary masks.</p>
+<p>This script:
+- Loads a pre-trained Keras model with a custom F1 metric.
+- Loads image and mask data from directory structures.
+- Converts images and masks into 256x256 patches.
+- Trains the model using early stopping on validation loss.
+- Saves the fine-tuned model to the specified directory.</p>
+<dl class="simple">
+<dt>Directory structure expected under –data:</dt><dd><p>├── train_images/
+├── train_masks/
+├── val_images/
+└── val_masks/</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.train.f1">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.train.</span></span><span class="sig-name descname"><span class="pre">f1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.train.f1" title="Link to this definition"></a></dt>
+<dd><p>Compute the F1 score between predicted and true labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – Ground truth binary mask tensor.</p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – Predicted binary mask tensor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Computed F1 score.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.train.load_data">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.train.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patch_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.train.load_data" title="Link to this definition"></a></dt>
+<dd><p>Load grayscale images and binary masks from directories and convert to patches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_dir</strong> (<em>str</em>) – Directory containing grayscale root images.</p></li>
+<li><p><strong>mask_dir</strong> (<em>str</em>) – Directory containing corresponding binary masks.</p></li>
+<li><p><strong>patch_size</strong> (<em>int</em>) – Size of each patch (e.g. 256).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Arrays of image patches and mask patches.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[np.ndarray, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.train.run_training">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.train.</span></span><span class="sig-name descname"><span class="pre">run_training</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patch_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.train.run_training" title="Link to this definition"></a></dt>
+<dd><p>Load and fine-tune a pre-trained model on root segmentation data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_path</strong> (<em>str</em>) – Path to the pre-trained <cite>.keras</cite> model.</p></li>
+<li><p><strong>data_root</strong> (<em>str</em>) – Root directory containing training and validation images/masks.</p></li>
+<li><p><strong>model_dir</strong> (<em>str</em>) – Directory to save the trained model.</p></li>
+<li><p><strong>patch_size</strong> (<em>int</em>) – Size of the patches (e.g., 256).</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – Batch size for training.</p></li>
+<li><p><strong>epochs</strong> (<em>int</em>) – Maximum number of epochs to train.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If no training or validation data is found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-axonrooter">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-axonrooter" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.run_inference">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">run_inference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">padded_input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_top</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_bottom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_right</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_padding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.run_inference" title="Link to this definition"></a></dt>
+<dd><p>Run inference on padded input image.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>padded_input<span class="classifier">numpy.ndarray</span></dt><dd><p>Padded grayscale input image</p>
+</dd>
+<dt>pad_top, pad_bottom, pad_left, pad_right<span class="classifier">int</span></dt><dd><p>Padding values used to create the padded image</p>
+</dd>
+<dt>remove_padding<span class="classifier">bool</span></dt><dd><p>Whether to remove padding from the result (default: True)</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>numpy.ndarray</dt><dd><p>Predicted mask, either padded or unpadded based on remove_padding parameter</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.extract_bottom_tips">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">extract_bottom_tips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">labeled_mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_roots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.extract_bottom_tips" title="Link to this definition"></a></dt>
+<dd><p>Extract bottom-most tip coordinates of roots from a labeled mask.</p>
+<p>This function:
+- Skeletonizes the binary mask of each labeled root.
+- Converts each skeleton into a graph and computes top and bottom nodes.
+- Selects only roots that start in the top half of the image.
+- Returns up to <cite>max_roots</cite> largest roots based on pixel area.
+- Plots the detected tips on the labeled mask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labeled_mask</strong> (<em>numpy.ndarray</em>) – 2D labeled array where each root has a unique integer label.</p></li>
+<li><p><strong>max_roots</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of roots to process, by area. Default is 5.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(tips, tips_image)
+tips: list of (y, x) pixel coordinates of the detected bottom tips.
+tips_image: np.ndarray, blank image with tips marked as dots (value 255).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.crop_initial">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">crop_initial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_crop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.crop_initial" title="Link to this definition"></a></dt>
+<dd><p>Crop the borders of an image by removing a fixed number of pixels from each side.</p>
+<p>This function removes border artifacts and noise by cropping a fixed number of pixels
+from all sides of the input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input image array to be cropped.</p></li>
+<li><p><strong>initial_crop</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of pixels to crop from each side. Default is 100.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>cropped_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Image with borders removed.</p>
+</dd>
+<dt>crop_left<span class="classifier">int</span></dt><dd><p>Number of pixels cropped from the left (equals initial_crop).</p>
+</dd>
+<dt>crop_top<span class="classifier">int</span></dt><dd><p>Number of pixels cropped from the top (equals initial_crop).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.find_edges">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">find_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.find_edges" title="Link to this definition"></a></dt>
+<dd><p>Find the left and right edges in a 1D intensity line based on threshold crossing.
+This function scans a 1D intensity profile to detect edges where pixel values
+cross a specified threshold, indicating transitions between background and content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line</strong> (<em>numpy.ndarray</em>) – 1D array representing pixel intensity values along a line.</p></li>
+<li><p><strong>threshold</strong> (<em>int</em><em>, </em><em>optional</em>) – Threshold value to detect edge transitions. Default is 70.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A tuple containing:</p>
+<ul class="simple">
+<li><p><strong>left_edge</strong> (<em>int or None</em>): Index of the left edge where intensity crosses the threshold.</p></li>
+<li><p><strong>right_edge</strong> (<em>int or None</em>): Index of the right edge where intensity crosses the threshold.</p></li>
+</ul>
+<p>Returns (None, None) if no edges are found.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple of int or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.format_crop">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">format_crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.format_crop" title="Link to this definition"></a></dt>
+<dd><p>Crop the image to a square region based on edge detection in central profiles.</p>
+<p>This function analyzes the central horizontal and vertical intensity profiles
+to detect content boundaries, then creates a square crop that encompasses
+the detected content area.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input grayscale image to be cropped.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>cropped_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Square-cropped image based on detected edges.</p>
+</dd>
+<dt>left_x<span class="classifier">int</span></dt><dd><p>X-coordinate offset of the crop from the original image.</p>
+</dd>
+<dt>top_y<span class="classifier">int</span></dt><dd><p>Y-coordinate offset of the crop from the original image.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.padding_function">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">padding_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PATCH_SIZE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.padding_function" title="Link to this definition"></a></dt>
+<dd><p>Pad the input image so its dimensions are multiples of PATCH_SIZE.</p>
+<p>This function ensures the image dimensions are compatible with patch-based
+processing by padding the image to the nearest multiple of PATCH_SIZE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>formatted</strong> (<em>numpy.ndarray</em>) – Input image to be padded.</p></li>
+<li><p><strong>PATCH_SIZE</strong> (<em>int</em><em>, </em><em>optional</em>) – Target patch size multiple for padding. Default is 256.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>padded_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Image padded to the nearest multiple of PATCH_SIZE.</p>
+</dd>
+<dt>pad_top<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the top.</p>
+</dd>
+<dt>pad_bottom<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the bottom.</p>
+</dd>
+<dt>pad_left<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the left.</p>
+</dd>
+<dt>pad_right<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the right.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.load_and_preprocess_image">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">load_and_preprocess_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PATCH_SIZE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.load_and_preprocess_image" title="Link to this definition"></a></dt>
+<dd><p>Complete preprocessing pipeline for microscopy images.</p>
+<p>This function applies the full preprocessing pipeline including initial border
+cropping, content-based format cropping, and padding for patch compatibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.ndarray</em>) – Input image (BGR or grayscale) to be preprocessed.</p></li>
+<li><p><strong>PATCH_SIZE</strong> (<em>int</em><em>, </em><em>optional</em>) – Target patch size multiple for padding. Default is 256.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>padded_image<span class="classifier">numpy.ndarray</span></dt><dd><p>Fully preprocessed and padded grayscale image.</p>
+</dd>
+<dt>pad_top<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the top.</p>
+</dd>
+<dt>pad_bottom<span class="classifier">int</span></dt><dd><p>Number of pixels padded at the bottom.</p>
+</dd>
+<dt>pad_left<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the left.</p>
+</dd>
+<dt>pad_right<span class="classifier">int</span></dt><dd><p>Number of pixels padded on the right.</p>
+</dd>
+<dt>total_crop_left<span class="classifier">int</span></dt><dd><p>Total horizontal offset from all cropping operations.</p>
+</dd>
+<dt>total_crop_top<span class="classifier">int</span></dt><dd><p>Total vertical offset from all cropping operations.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The preprocessing pipeline consists of:
+1. Conversion to grayscale (if needed)
+2. Initial border cropping (removes 100px borders)
+3. Format cropping (content-based square crop)
+4. Padding (to nearest PATCH_SIZE multiple)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.calculate_iou">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">calculate_iou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">box1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.calculate_iou" title="Link to this definition"></a></dt>
+<dd><p>Calculate the Intersection over Union (IoU) of two bounding boxes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>box1</strong> (<em>tuple</em>) – Bounding box 1 (x_min, y_min, x_max, y_max).</p></li>
+<li><p><strong>box2</strong> (<em>tuple</em>) – Bounding box 2 (x_min, y_min, x_max, y_max).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>IoU value.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.apply_strict_bboxes">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">apply_strict_bboxes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preprocessed_mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bottom_y_cutoff_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.85</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_y_cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_x_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.apply_strict_bboxes" title="Link to this definition"></a></dt>
+<dd><p>Extract bounding boxes from a mask with multiple filtering steps including size threshold,
+bottom cutoff, IoU-based suppression, top cutoff, and proximity-based suppression on the X axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>preprocessed_mask</strong> (<em>np.ndarray</em>) – Binary mask (2D array) after preprocessing, used for connected component detection.</p></li>
+<li><p><strong>original_mask</strong> (<em>np.ndarray</em>) – Original binary mask (2D array) for labeling the final output.</p></li>
+<li><p><strong>iou_threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – Intersection-over-Union threshold for suppressing overlapping bounding boxes (default is 0.001).</p></li>
+<li><p><strong>size_threshold</strong> (<em>int</em><em>, </em><em>optional</em>) – Minimum area (in pixels) of bounding boxes to keep (default is 2000).</p></li>
+<li><p><strong>bottom_y_cutoff_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – Fraction of image height below which bounding boxes are considered (default is 0.85).</p></li>
+<li><p><strong>top_y_cutoff</strong> (<em>int</em><em>, </em><em>optional</em>) – Minimum y-coordinate to exclude boxes close to the top of the image (default is 100).</p></li>
+<li><p><strong>min_x_distance</strong> (<em>int</em><em>, </em><em>optional</em>) – Minimum allowed horizontal distance between bounding boxes; boxes closer than this will be suppressed (default is 20).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>labeled_output</strong> (<em>np.ndarray</em>) – Labeled mask of the same shape as <cite>original_mask</cite>, with connected components numbered after filtering.</p></li>
+<li><p><strong>final</strong> (<em>list of tuples</em>) – List of final bounding boxes as tuples:
+(x_min, y_min, x_max, y_max, component_id, area)
+representing coordinates and metadata of each bounding box kept after filtering.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The function follows these steps:
+1. Label connected components on the preprocessed mask.
+2. Filter boxes by size and bottom cutoff.
+3. Suppress overlapping boxes based on IoU threshold.
+4. Remove boxes intersecting with the top strip.
+5. Suppress boxes too close horizontally, keeping the larger one.
+6. Create a labeled output mask reflecting the final bounding boxes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="axonrooter.preprocess_closing">
+<span class="sig-prename descclassname"><span class="pre">axonrooter.</span></span><span class="sig-name descname"><span class="pre">preprocess_closing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(32,</span> <span class="pre">32)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#axonrooter.preprocess_closing" title="Link to this definition"></a></dt>
+<dd><p>Apply morphological closing to a single binary mask to remove small holes
+and connect nearby components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mask</strong> (<em>np.ndarray</em>) – Input binary mask (0 and 1 or 0 and 255).</p></li>
+<li><p><strong>kernel_size</strong> (<em>tuple</em>) – Size of the elliptical structuring element.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Post-processed binary mask.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="axonrooter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="axonrooter.api.html" class="btn btn-neutral float-right" title="axonrooter.api package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Gabriel Wang, Endjis Kiršteins, Emil Fox, Michał Bątkowski.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

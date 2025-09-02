@@ -1,0 +1,233 @@
+[2025-06-24T20:10:37.620+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-24T20:10:37.658+0000] {__init__.py:54} DEBUG - Loading core task runner: StandardTaskRunner
+[2025-06-24T20:10:37.680+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-24T20:10:37.696+0000] {base_task_runner.py:73} DEBUG - Planning to run as the  user
+[2025-06-24T20:10:37.703+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-24T20:10:37.729+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Task Instance Not Running' PASSED: True, Task is not in running state.
+[2025-06-24T20:10:37.731+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Task Instance State' PASSED: True, Task state queued was valid.
+[2025-06-24T20:10:37.741+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-24T20:10:37.741+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-24T20:10:37.742+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-24T20:10:37.743+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]>
+[2025-06-24T20:10:37.752+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Pool Slots Available' PASSED: True, There are enough open slots in default_pool to execute the task
+[2025-06-24T20:10:37.753+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Task Concurrency' PASSED: True, Task concurrency is not set.
+[2025-06-24T20:10:37.756+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Previous Dagrun State' PASSED: True, The task did not have depends_on_past set.
+[2025-06-24T20:10:37.756+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Not In Retry Period' PASSED: True, The task instance was not marked for retrying.
+[2025-06-24T20:10:37.757+0000] {taskinstance.py:2088} DEBUG - <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]> dependency 'Trigger Rule' PASSED: True, The task instance did not have any upstream tasks.
+[2025-06-24T20:10:37.758+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [queued]>
+[2025-06-24T20:10:37.759+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-06-24T20:10:37.781+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): run_retraining_pipeline> on 2025-06-24 20:05:17.784031+00:00
+[2025-06-24T20:10:37.806+0000] {standard_task_runner.py:63} INFO - Started process 436 to run task
+[2025-06-24T20:10:37.814+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'axonrooter_weekly_retraining', 'run_retraining_pipeline', 'manual__2025-06-24T20:05:17.784031+00:00', '--job-id', '108', '--raw', '--subdir', 'DAGS_FOLDER/retrain_dag.py', '--cfg-path', '/tmp/tmpeitw3nv5']
+[2025-06-24T20:10:37.824+0000] {standard_task_runner.py:91} INFO - Job 108: Subtask run_retraining_pipeline
+[2025-06-24T20:10:37.827+0000] {cli_action_loggers.py:70} DEBUG - Calling callbacks: [<function default_action_log at 0x772c6c720ca0>]
+[2025-06-24T20:10:37.923+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-24T20:10:37.939+0000] {task_command.py:426} INFO - Running <TaskInstance: axonrooter_weekly_retraining.run_retraining_pipeline manual__2025-06-24T20:05:17.784031+00:00 [running]> on host 2396ac50d429
+[2025-06-24T20:10:37.940+0000] {settings.py:363} DEBUG - Disposing DB connection pool (PID 436)
+[2025-06-24T20:10:37.941+0000] {settings.py:250} DEBUG - Setting up DB connection pool (PID 436)
+[2025-06-24T20:10:37.942+0000] {settings.py:298} DEBUG - settings.prepare_engine_args(): Using NullPool
+[2025-06-24T20:10:38.010+0000] {taskinstance.py:1042} DEBUG - previous_execution_date was called
+[2025-06-24T20:10:38.020+0000] {taskinstance.py:1845} DEBUG - Clearing XCom data
+[2025-06-24T20:10:38.034+0000] {retries.py:91} DEBUG - Running RenderedTaskInstanceFields.write with retries. Try 1 of 3
+[2025-06-24T20:10:38.068+0000] {retries.py:91} DEBUG - Running RenderedTaskInstanceFields._do_delete_old_records with retries. Try 1 of 3
+[2025-06-24T20:10:38.091+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='axonrooter_weekly_retraining' AIRFLOW_CTX_TASK_ID='run_retraining_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-06-24T20:05:17.784031+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-24T20:05:17.784031+00:00'
+[2025-06-24T20:10:38.093+0000] {__init__.py:119} DEBUG - Preparing lineage inlets and outlets
+[2025-06-24T20:10:38.096+0000] {__init__.py:158} DEBUG - inlets: [], outlets: []
+[2025-06-24T20:10:38.097+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-24T20:10:38.116+0000] {base.py:84} INFO - Using connection ID 'azure_ml_conn' for task execution.
+[2025-06-24T20:10:38.257+0000] {authority.py:75} DEBUG - Initializing with Entra authority: https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886
+[2025-06-24T20:10:38.260+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2025-06-24T20:10:42.820+0000] {retries.py:91} DEBUG - Running Job._fetch_from_db with retries. Try 1 of 3
+[2025-06-24T20:10:42.835+0000] {retries.py:91} DEBUG - Running Job._update_heartbeat with retries. Try 1 of 3
+[2025-06-24T20:10:42.855+0000] {job.py:214} DEBUG - [heartbeat]
+[2025-06-24T20:10:46.276+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2025-06-24T20:10:47.896+0000] {retries.py:91} DEBUG - Running Job._fetch_from_db with retries. Try 1 of 3
+[2025-06-24T20:10:47.907+0000] {retries.py:91} DEBUG - Running Job._update_heartbeat with retries. Try 1 of 3
+[2025-06-24T20:10:47.925+0000] {job.py:214} DEBUG - [heartbeat]
+[2025-06-24T20:10:47.928+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2025-06-24T20:10:51.151+0000] {_universal.py:511} INFO - Request URL: 'https://login.microsoftonline.com/0a33589b-0036-4fe8-a829-3ed0926af886/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.23.0 Python/3.10.14 (Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+No body was attached to the request
+[2025-06-24T20:10:51.170+0000] {get_token_mixin.py:157} WARNING - ClientSecretCredential.get_token_info failed: Authentication failed: <urllib3.connection.HTTPSConnection object at 0x772c33e413f0>: Failed to resolve 'login.microsoftonline.com' ([Errno -2] Name or service not known)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/client_credential_base.py", line 27, in _acquire_token_silently
+    app = self._get_app(**kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/msal_credentials.py", line 108, in _get_app
+    client_applications_map[tenant_id] = app_class(
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/application.py", line 632, in __init__
+    self.authority = Authority(
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/authority.py", line 79, in __init__
+    openid_config = tenant_discovery(
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/authority.py", line 210, in tenant_discovery
+    resp = http_client.get(tenant_discovery_endpoint, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/individual_cache.py", line 273, in wrapper
+    value = function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/throttled_http_client.py", line 96, in get
+    return NormalizedResponse(self.http_client.get(*args, **kwargs))
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/msal_client.py", line 111, in get
+    response = self._pipeline.run(request, stream=False)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_retry.py", line 566, in send
+    raise err
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/transport/_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: <urllib3.connection.HTTPSConnection object at 0x772c33e413f0>: Failed to resolve 'login.microsoftonline.com' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/get_token_mixin.py", line 132, in _get_token_base
+    token = self._acquire_token_silently(
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/decorators.py", line 80, in wrapper
+    raise auth_error from ex
+azure.core.exceptions.ClientAuthenticationError: Authentication failed: <urllib3.connection.HTTPSConnection object at 0x772c33e413f0>: Failed to resolve 'login.microsoftonline.com' ([Errno -2] Name or service not known)
+[2025-06-24T20:10:51.176+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-24T20:10:51.177+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/decorators.py", line 75, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/client_credential_base.py", line 27, in _acquire_token_silently
+    app = self._get_app(**kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/msal_credentials.py", line 108, in _get_app
+    client_applications_map[tenant_id] = app_class(
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/application.py", line 632, in __init__
+    self.authority = Authority(
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/authority.py", line 79, in __init__
+    openid_config = tenant_discovery(
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/authority.py", line 210, in tenant_discovery
+    resp = http_client.get(tenant_discovery_endpoint, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/individual_cache.py", line 273, in wrapper
+    value = function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/msal/throttled_http_client.py", line 96, in get
+    return NormalizedResponse(self.http_client.get(*args, **kwargs))
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/msal_client.py", line 111, in get
+    response = self._pipeline.run(request, stream=False)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_retry.py", line 566, in send
+    raise err
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 1 more time]
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 130, in send
+    self._sender.send(request.http_request, **request.context.options),
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/transport/_requests_basic.py", line 409, in send
+    raise error
+azure.core.exceptions.ServiceRequestError: <urllib3.connection.HTTPSConnection object at 0x772c33e413f0>: Failed to resolve 'login.microsoftonline.com' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/retrain_dag.py", line 40, in run_pipeline
+    dataset = ml_client.data.get(name=DATA_ASSET_NAME, label="latest")
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/_telemetry/activity.py", line 288, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_data_operations.py", line 265, in get
+    return _resolve_label_to_asset(self, name, label)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/_utils/_asset_utils.py", line 1106, in _resolve_label_to_asset
+    return resolver(name)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/operations/_data_operations.py", line 675, in _get_latest_version
+    latest_version = _get_latest_version_from_container(
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/_utils/_asset_utils.py", line 858, in _get_latest_version_from_container
+    else container_operation.get(
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/tracing/decorator.py", line 119, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/ai/ml/_restclient/v2023_04_01_preview/operations/_data_containers_operations.py", line 422, in get
+    pipeline_response = self._client._pipeline.run(  # pylint: disable=protected-access
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 242, in run
+    return first_node.send(pipeline_request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/_base.py", line 98, in send
+    response = self.next.send(request)
+  [Previous line repeated 2 more times]
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/mgmt/core/policies/_base.py", line 46, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_redirect.py", line 205, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_retry.py", line 544, in send
+    response = self.next.send(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_authentication.py", line 157, in send
+    self.on_request(request)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_authentication.py", line 132, in on_request
+    self._request_token(*self._scopes)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_authentication.py", line 108, in _request_token
+    self._token = self._get_token(*scopes, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/core/pipeline/policies/_authentication.py", line 98, in _get_token
+    return cast(SupportsTokenInfo, self._credential).get_token_info(*scopes, options=options)
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/get_token_mixin.py", line 114, in get_token_info
+    return self._get_token_base(*scopes, options=options, base_method_name="get_token_info")
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/get_token_mixin.py", line 132, in _get_token_base
+    token = self._acquire_token_silently(
+  File "/home/airflow/.local/lib/python3.10/site-packages/azure/identity/_internal/decorators.py", line 80, in wrapper
+    raise auth_error from ex
+azure.core.exceptions.ClientAuthenticationError: Authentication failed: <urllib3.connection.HTTPSConnection object at 0x772c33e413f0>: Failed to resolve 'login.microsoftonline.com' ([Errno -2] Name or service not known)
+[2025-06-24T20:10:51.202+0000] {taskinstance.py:562} DEBUG - Task Duration set to 13.458332
+[2025-06-24T20:10:51.204+0000] {taskinstance.py:584} DEBUG - Clearing next_method and next_kwargs.
+[2025-06-24T20:10:51.205+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=axonrooter_weekly_retraining, task_id=run_retraining_pipeline, run_id=manual__2025-06-24T20:05:17.784031+00:00, execution_date=20250624T200517, start_date=20250624T201037, end_date=20250624T201051
+[2025-06-24T20:10:51.225+0000] {cli_action_loggers.py:88} DEBUG - Calling callbacks: []
+[2025-06-24T20:10:51.227+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 108 for task run_retraining_pipeline (Authentication failed: <urllib3.connection.HTTPSConnection object at 0x772c33e413f0>: Failed to resolve 'login.microsoftonline.com' ([Errno -2] Name or service not known); 436)
+[2025-06-24T20:10:51.275+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-24T20:10:51.301+0000] {dagrun.py:932} DEBUG - number of tis tasks for <DagRun axonrooter_weekly_retraining @ 2025-06-24 20:05:17.784031+00:00: manual__2025-06-24T20:05:17.784031+00:00, state:running, queued_at: 2025-06-24 20:05:17.898949+00:00. externally triggered: True>: 0 task(s)
+[2025-06-24T20:10:51.303+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-24T20:10:51.308+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

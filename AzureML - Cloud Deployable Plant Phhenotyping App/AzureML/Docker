@@ -1,0 +1,20 @@
+# Dockerfile
+FROM mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
+
+# Set working directory
+WORKDIR /app
+
+# Copy your conda environment file
+COPY environment.yml .
+
+# Create the environment
+RUN conda env create -f environment.yml && conda clean -afy
+
+# Activate the conda environment
+SHELL ["conda", "run", "-n", "cv_env", "/bin/bash", "-c"]
+
+# Add your project files (optional)
+COPY . .
+
+# Set the default path
+ENV PATH /opt/conda/envs/cv_env/bin:$PATH

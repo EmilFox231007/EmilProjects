@@ -1,0 +1,3 @@
+timestamp,original_file_name,saved_image_file,saved_mask_file,num_tips,tips_correct,tips_oob,root_overlay,thin_root,missing_tips,wrong_tips,obscured_roots
+2025-06-17 13:13:32,test1.png,,,5,True,True,False,False,False,False,False
+2025-06-17 13:42:07,test1.png,test1_20250617_134206_input.tif,test1_20250617_134206_mask.tif,True,False,False,False,False,False,False

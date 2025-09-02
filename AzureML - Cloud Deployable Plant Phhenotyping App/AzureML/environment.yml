@@ -1,0 +1,32 @@
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - tensorflow=2.12.*
+  - ipykernel
+  - imageio
+  - matplotlib
+  - numpy
+  - pandas
+  - scikit-image
+  - scipy
+  - networkx
+  - skan
+  - pybullet
+  - sqlite
+  - pytz
+  - scikit-learn 
+  - pip
+  - pip:
+      - opencv-python-headless
+      - typer
+      - azure-identity
+      - azure-ai-ml
+      - azureml-core
+      - azureml-defaults
+      - patchify
+name: cv_env_azure
+
+
+

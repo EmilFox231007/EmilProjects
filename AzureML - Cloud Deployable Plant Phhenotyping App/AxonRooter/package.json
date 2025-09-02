@@ -1,0 +1,9 @@
+{
+    "name": "axonrooter-root",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "cd src/axonrooter/streamlit_drawable_canvas/frontend && npm install && set NODE_OPTIONS=--openssl-legacy-provider && npm run build",
+        "dev": "cd src/axonrooter/streamlit_drawable_canvas/frontend && npm start"
+    }
+}

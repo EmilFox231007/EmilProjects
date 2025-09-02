@@ -1,0 +1,15 @@
+# Core project dependencies
+tensorflow
+opencv-python
+numpy
+matplotlib
+Pillow
+
+# Azure integration (if needed for inference or register scripts)
+azure-ai-ml
+azure-core
+azure-identity
+
+# Test dependencies
+pytest
+coverage
