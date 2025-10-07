@@ -1,6 +1,10 @@
-# Video Transcription, Translation, and Emotion Detection Pipeline
+# Video Transcription, Translation, and Emotion Detection Pipeline (Group Project)
 
 This project provides a complete pipeline that downloads a YouTube video, extracts its audio, transcribes the audio using AssemblyAI, translates the transcription using a pre-trained translation model (via the Transformers library), and detects emotions in the translated text using a TensorFlow Keras model.
+
+## What was I in charge of? 
+
+I was in charge of AI model research, model training and optimization, and pipeline developing and designing.  
 
 ---
 

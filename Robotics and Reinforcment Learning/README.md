@@ -1,4 +1,4 @@
-# Reinforcement Learning and Robotics Simulation
+# Reinforcement Learning and Robotics Simulation (Individual Project)
 
 # Project description:
 

@@ -1,6 +1,10 @@
-# For employers:
+# For employers: (Group Project)
 
 ## This project had us deploy a previous project we worked on fully on the cloud and locally. Using AzureML we fully deployed the CV ML plant phenotyping model which returns the coordinates from an image of a petri dish with plant roots, all done inside of an app that includes active feedback and abilty for correction of the plant masks that is sent to the training batch so that the model can be improved.   
+
+## What was I in charge of?
+
+The tasks I did for this project include: Full oversight and main developer of the backend of our app. This includes making re-deployement and re-training pipelines in azure, CI/CD, Inference pipeline, APIs & CLI & endpoints, Feedback training loop and unit testing.
 
 # Project description
 

@@ -1,4 +1,4 @@
-# Computer Vision: Root Length Detection and Segmentation 
+# Computer Vision: Root Length Detection and Segmentation (Individual Project)
 
 ### This first part of the project uses Computer Vision and Machine Learning techniques to segment and analyze plant root structures from petri dish images and masks and ultimately obtaining the root length measurements and root tip coordinates for faster and automatic inoculation of the plants, in which I also performed a robotics simulation to inoculate the root tips in a simulated environment. ML U-Net based models were also trained with plant images and masks. 
 
