@@ -1,3 +1,3 @@
 # PowerBI dashboard creation and data analytics (Individual Project)
 
-## In this project of mine I picked 1 goal from the The Sustainable Development Goals list which is a set of goals the world should meet in a certain amount of time. I made a powerbi dashboard highlighting why and how bad the world is going in terms of this topic using data, showcased with different graphs and other such data visualization tecniques and data storytelling.
+### I selected one UN Sustainable Development Goal and developed a Power BI dashboard to reveal how and why the world is falling short. The report combines trend lines, country benchmarks, and drill-through views with data storytelling techniques to surface drivers, hotspots, and potential interventions. The result is an interactive tool stakeholders can use to explore the problem and prioritize action.
